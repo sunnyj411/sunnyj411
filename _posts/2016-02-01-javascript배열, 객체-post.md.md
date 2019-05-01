@@ -1,5 +1,5 @@
 ﻿---
-title: "2/4 javascript 객체, 배열"
+title: "2/1 javascript 객체, 배열"
 date: 2016-02-01 23:24:00 -0400
 ---
 # 2/4 javascript
