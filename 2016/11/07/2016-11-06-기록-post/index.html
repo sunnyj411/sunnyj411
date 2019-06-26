@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/6 | 정리방</title>
+  <title>11/06 기록 | 정리방</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="정리방">
-<meta property="og:url" content="http://yoursite.com/archives/2019/06/index.html">
+  <meta name="description" content="11/06 기록full GC JVM 이 old GC를 처리하면서 전체 Lock이 걸림 ClosableThread Pool 에 있는 task들의 task 실행 순서는 알수 없음  Thread Pool 에 runnable, callable을 사용해서 Thread는 매번 생성하지 않고 task가 끝나면 비어진 Thread에 다시 Thread가 수행하도록 하는 T">
+<meta property="og:type" content="article">
+<meta property="og:title" content="11&#x2F;06 기록">
+<meta property="og:url" content="http://yoursite.com/2016/11/07/2016-11-06-기록-post/index.html">
 <meta property="og:site_name" content="정리방">
+<meta property="og:description" content="11/06 기록full GC JVM 이 old GC를 처리하면서 전체 Lock이 걸림 ClosableThread Pool 에 있는 task들의 task 실행 순서는 알수 없음  Thread Pool 에 runnable, callable을 사용해서 Thread는 매번 생성하지 않고 task가 끝나면 비어진 Thread에 다시 Thread가 수행하도록 하는 T">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-11T08:16:13.014Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="정리방">
+<meta name="twitter:title" content="11&#x2F;06 기록">
+<meta name="twitter:description" content="11/06 기록full GC JVM 이 old GC를 처리하면서 전체 Lock이 걸림 ClosableThread Pool 에 있는 task들의 task 실행 순서는 알수 없음  Thread Pool 에 runnable, callable을 사용해서 Thread는 매번 생성하지 않고 task가 끝나면 비어진 Thread에 다시 Thread가 수행하도록 하는 T">
   
     <link rel="alternative" href="/atom.xml" title="정리방" type="application/atom+xml">
   
@@ -128,49 +132,169 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2016-11-06-기록-post" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/26/2018-04-30-BEM/" class="archive-article-date">
-  	<time datetime="2019-06-26T14:53:29.567Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-26</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/26/2018-04-30-BEM/">BEM</a>
+    <h1 class="article-title" itemprop="name">
+      11/06 기록
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2016/11/07/2016-11-06-기록-post/" class="archive-article-date">
+  	<time datetime="2016-11-06T21:29:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="11-06-기록"><a href="#11-06-기록" class="headerlink" title="11/06 기록"></a>11/06 기록</h1><h2 id="full-GC"><a href="#full-GC" class="headerlink" title="full GC"></a>full GC</h2><ul>
+<li><p>JVM 이 old GC를 처리하면서 전체 Lock이 걸림</p>
+<h2 id="Closable"><a href="#Closable" class="headerlink" title="Closable"></a>Closable</h2><p>Thread Pool 에 있는 task들의 task 실행 순서는 알수 없음</p>
+</li>
+<li><p>Thread Pool 에 runnable, callable을 사용해서 Thread는 매번 생성하지 않고 task가 끝나면 비어진 Thread에 다시 Thread가 수행하도록 하는 Thead pool의 장점이 있음</p>
+</li>
+<li><p>ExecuteService : Thread pool, task 들을 만들고 관리함   </p>
+</li>
+<li><p>singleThreadExecutor : 요청은 여러 개 지만 하나씩 처리 </p>
+</li>
+</ul>
+<h2 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h2><ul>
+<li>Java의 unsigned<ul>
+<li>Java 8에서 Integer, Long 클래스의 메소드로 unsigned type을 지원</li>
+<li>자바의 Primitive Data Type 들 중에는 unsigned 데이터 타입이 존재하지 않음</li>
+<li>byte에서 int(4byte)로 바뀌면서 기존 값이 바뀔 수 있음</li>
+<li>FileReader 는 char형 배열에 저장하고, FileInputStream은 byte 형 배열에 저장 함</li>
+</ul>
+</li>
+</ul>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2016/11/07/2016-11-06-기록-post/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/08/06/2017-08-05-MIME/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MIME
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2016/09/21/2016-09-20-기록-post/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">9/20 기록</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -190,8 +314,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

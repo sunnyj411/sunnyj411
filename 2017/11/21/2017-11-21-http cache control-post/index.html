@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/6 | 정리방</title>
+  <title>http cache control | 정리방</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="정리방">
-<meta property="og:url" content="http://yoursite.com/archives/2019/06/index.html">
+  <meta name="description" content="Cache-Control :cache-request-directive=“no-cache” 캐시 하지 않는다.“no-store” 신속히 넘긴 후에 정보를 제거한다.“max-age = seconds” seconds에 지정한 것보다 오래된 entry는 캐시하지 않는다.“max-stale [=seconds]” 만료된 데이터를 보낸다. 만약 seconds가 지정되어">
+<meta property="og:type" content="article">
+<meta property="og:title" content="http cache control">
+<meta property="og:url" content="http://yoursite.com/2017/11/21/2017-11-21-http cache control-post/index.html">
 <meta property="og:site_name" content="정리방">
+<meta property="og:description" content="Cache-Control :cache-request-directive=“no-cache” 캐시 하지 않는다.“no-store” 신속히 넘긴 후에 정보를 제거한다.“max-age = seconds” seconds에 지정한 것보다 오래된 entry는 캐시하지 않는다.“max-stale [=seconds]” 만료된 데이터를 보낸다. 만약 seconds가 지정되어">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-09T15:00:24.281Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="정리방">
+<meta name="twitter:title" content="http cache control">
+<meta name="twitter:description" content="Cache-Control :cache-request-directive=“no-cache” 캐시 하지 않는다.“no-store” 신속히 넘긴 후에 정보를 제거한다.“max-age = seconds” seconds에 지정한 것보다 오래된 entry는 캐시하지 않는다.“max-stale [=seconds]” 만료된 데이터를 보낸다. 만약 seconds가 지정되어">
   
     <link rel="alternative" href="/atom.xml" title="정리방" type="application/atom+xml">
   
@@ -128,49 +132,151 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2017-11-21-http cache control-post" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/26/2018-04-30-BEM/" class="archive-article-date">
-  	<time datetime="2019-06-26T14:53:29.567Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-26</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/26/2018-04-30-BEM/">BEM</a>
+    <h1 class="article-title" itemprop="name">
+      http cache control
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2017/11/21/2017-11-21-http cache control-post/" class="archive-article-date">
+  	<time datetime="2017-11-21T14:14:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Cache-Control"><a href="#Cache-Control" class="headerlink" title="Cache-Control :"></a>Cache-Control :</h2><p>cache-request-directive=<br>“no-cache” 캐시 하지 않는다.<br>“no-store” 신속히 넘긴 후에 정보를 제거한다.<br>“max-age = seconds” seconds에 지정한 것보다 오래된 entry는 캐시하지 않는다.<br>“max-stale [=seconds]” 만료된 데이터를 보낸다. 만약 seconds가 지정되어 있다면 지정한 숫자보다 적은 만료된 데이터를 보낸다.<br>“min-fresh [=seconds]” 명시된 seconds의 수 이후의 변경된 새 데이터만 보낸다.<br>“only-if-cached” 새로운 데이터를 검색하지 않고 캐시에 있는 데이터만 반환한다.</p>
+<h2 id="Cache-Control-1"><a href="#Cache-Control-1" class="headerlink" title="Cache-Control :"></a>Cache-Control :</h2><p>cache-response-directive=<br>“public” 어떠한 캐쉬라도 캐싱할 수 있다.<br>“private” 공유된 캐쉬는 캐시하지 않는다.<br>“no-cache” 캐쉬하지 않는다.<br>“no-transform” 데이터를 변환하지 않는다.<br>“must-revalidate” 클라이언트는 데이터를 재확인 해야 한다.<br>“proxy-revalidate” 개인적인 클라이언트 캐시를 제외하고 데이터를 재확인 해야한다.<br>“max-age”=”delta-seconds” 문서는 지정된 seconds만큼 변화가 없는 상태라고 생각</p>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/11/21/2017-11-21-http cache control-post/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/02/04/2018-02-03-NGrinder/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          NGrinder
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/11/21/2017-11-20-etc/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">etc</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -190,8 +296,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
