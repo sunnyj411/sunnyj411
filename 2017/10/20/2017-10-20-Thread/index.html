@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/11 | 정리방</title>
+  <title>Thread | 정리방</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="정리방">
-<meta property="og:url" content="http://yoursite.com/archives/2017/11/index.html">
+  <meta name="description" content="Thread wait : wait -&amp;gt; lock 해제 되면 다른 thread 가 wait으로 들어옴 (깨워주면 일어나고 아니면 계속 wait) notify yield : 우선 순위가 높은 스레드에게 실행을 양보하고 Runnable 상태로 감  Critical section 동시에 요청이 들어오는 부분을 처리하기 위해 synchronized 사용 sem">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Thread">
+<meta property="og:url" content="http://yoursite.com/2017/10/20/2017-10-20-Thread/index.html">
 <meta property="og:site_name" content="정리방">
+<meta property="og:description" content="Thread wait : wait -&amp;gt; lock 해제 되면 다른 thread 가 wait으로 들어옴 (깨워주면 일어나고 아니면 계속 wait) notify yield : 우선 순위가 높은 스레드에게 실행을 양보하고 Runnable 상태로 감  Critical section 동시에 요청이 들어오는 부분을 처리하기 위해 synchronized 사용 sem">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-26T15:22:36.018Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="정리방">
+<meta name="twitter:title" content="Thread">
+<meta name="twitter:description" content="Thread wait : wait -&amp;gt; lock 해제 되면 다른 thread 가 wait으로 들어옴 (깨워주면 일어나고 아니면 계속 wait) notify yield : 우선 순위가 높은 스레드에게 실행을 양보하고 Runnable 상태로 감  Critical section 동시에 요청이 들어오는 부분을 처리하기 위해 synchronized 사용 sem">
   
     <link rel="alternative" href="/atom.xml" title="정리방" type="application/atom+xml">
   
@@ -128,76 +132,182 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2017-10-20-Thread" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/21/2017-11-21-http cache control-post/" class="archive-article-date">
-  	<time datetime="2017-11-21T14:14:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/21/2017-11-21-http cache control-post/">http cache control</a>
+    <h1 class="article-title" itemprop="name">
+      Thread
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/20/2017-11-20-etc/" class="archive-article-date">
-  	<time datetime="2017-11-20T08:21:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-20</time>
+        
+        <a href="/2017/10/20/2017-10-20-Thread/" class="archive-article-date">
+  	<time datetime="2017-10-20T07:38:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/20/2017-11-20-etc/">etc</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Thread"><a href="#Thread" class="headerlink" title="Thread"></a>Thread</h2><ul>
+<li>wait : wait -&gt; lock 해제 되면 다른 thread 가 wait으로 들어옴 (깨워주면 일어나고 아니면 계속 wait)</li>
+<li>notify</li>
+<li>yield : 우선 순위가 높은 스레드에게 실행을 양보하고 Runnable 상태로 감</li>
+</ul>
+<h2 id="Critical-section"><a href="#Critical-section" class="headerlink" title="Critical section"></a>Critical section</h2><ul>
+<li>동시에 요청이 들어오는 부분을 처리하기 위해 synchronized 사용</li>
+<li>semapore, primitive 변수 와 string 권하지 않음, 그 이유는 string 은 시간이 지나거나 값이 변경 되면서 주소값이 같아질 수 있기에 그러면 다른 것들 까지 전부 lock이 걸림</li>
+<li>java는 커널 모드의 세마포어는 그런 것처럼 보이게 구현된 것. JVM은 하나(프로세스)</li>
+<li>멀티 프로세스에서 커널모드 동기화 하는 세마포어</li>
+<li>mutex는 세마포어가 될 수 없음</li>
+<li>세마포어는 mutex가 될 수 있음(하나일 때 각각)</li>
+<li>mutex 는 하나, 세마포어는 여러 개일 수 있음</li>
+<li>java에서 커널모드의 동기화는 없음</li>
+<li>syncronized{this} : this 객체에 lock이 걸린다기 보다 syncronized 잡힌 block에 lock이 걸리는 걸로 이해해야함 그 객체에 다른 syncronized 된 함수는 관계 없음</li>
+<li>java 에서 string은 string이 같을 때 같은 주소를 참조함 그러나 new String을 하면 다른 주소를 참조함 </li>
+</ul>
+<h2 id="Thead-Local-Storage"><a href="#Thead-Local-Storage" class="headerlink" title="Thead Local Storage"></a>Thead Local Storage</h2><ul>
+<li>자신의 Thead 상태를 계속 체크할 때 쓰임 </li>
+<li>ex) Spring security, DB Transaction</li>
+</ul>
+<h2 id="데몬-스레드"><a href="#데몬-스레드" class="headerlink" title="데몬 스레드"></a>데몬 스레드</h2><ul>
+<li>종료될 필요없는 Thread 일 때 사용</li>
+<li>ex) 가비지 컬렉터</li>
+</ul>
+<h2 id="cachedThreadPool"><a href="#cachedThreadPool" class="headerlink" title="cachedThreadPool"></a>cachedThreadPool</h2><ul>
+<li>빠르고 짧게 많이 처리되는 작업에 대해 보통 사용함</li>
+</ul>
+<h2 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h2><ul>
+<li>Spring에서 메인쓰레드는 사용자가 조작할 수 없도록 숨겨져 있고, Thread 들을 처리해서 메인스레드가 가볍게 구성되어 있고 실행 처리함</li>
+<li>Python 2.x : thread 병렬처리 X</li>
+<li>Python 3.x : 병렬처리 O</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/10/20/2017-10-20-Thread/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/10/31/2017-10-31-Spring security/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Spring Security
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/08/06/2017-08-06-junit테스트코드/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">doReturn과 when-then의 차이</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -217,8 +327,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

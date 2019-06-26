@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/11 | 정리방</title>
+  <title>2/5 javascript 함수, 스코프 | 정리방</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="정리방">
-<meta property="og:url" content="http://yoursite.com/archives/2017/11/index.html">
+  <meta name="description" content="2/4 javascript 함수, 스코프 함수 호출 순서가 바뀌어도 가능함 - 함수 선언이 암묵적으로 맨 위로 올라감 함수에 return 이 없으면 undefined 로 return 됨 문자로 선언된 것을 숫자로 처리할 때 형변환 함CSS -box model border : margin 과 padding의 경계 collapse : 간격을 없애서 한 선으로">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2&#x2F;5 javascript 함수, 스코프">
+<meta property="og:url" content="http://yoursite.com/2016/02/05/2016-02-05-javascript 함수,스코프-post/index.html">
 <meta property="og:site_name" content="정리방">
+<meta property="og:description" content="2/4 javascript 함수, 스코프 함수 호출 순서가 바뀌어도 가능함 - 함수 선언이 암묵적으로 맨 위로 올라감 함수에 return 이 없으면 undefined 로 return 됨 문자로 선언된 것을 숫자로 처리할 때 형변환 함CSS -box model border : margin 과 padding의 경계 collapse : 간격을 없애서 한 선으로">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-26T15:22:04.778Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="정리방">
+<meta name="twitter:title" content="2&#x2F;5 javascript 함수, 스코프">
+<meta name="twitter:description" content="2/4 javascript 함수, 스코프 함수 호출 순서가 바뀌어도 가능함 - 함수 선언이 암묵적으로 맨 위로 올라감 함수에 return 이 없으면 undefined 로 return 됨 문자로 선언된 것을 숫자로 처리할 때 형변환 함CSS -box model border : margin 과 padding의 경계 collapse : 간격을 없애서 한 선으로">
   
     <link rel="alternative" href="/atom.xml" title="정리방" type="application/atom+xml">
   
@@ -128,76 +132,169 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2016-02-05-javascript 함수,스코프-post" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/21/2017-11-21-http cache control-post/" class="archive-article-date">
-  	<time datetime="2017-11-21T14:14:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/21/2017-11-21-http cache control-post/">http cache control</a>
+    <h1 class="article-title" itemprop="name">
+      2/5 javascript 함수, 스코프
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/20/2017-11-20-etc/" class="archive-article-date">
-  	<time datetime="2017-11-20T08:21:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-20</time>
+        
+        <a href="/2016/02/05/2016-02-05-javascript 함수,스코프-post/" class="archive-article-date">
+  	<time datetime="2016-02-05T14:45:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-05</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/20/2017-11-20-etc/">etc</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="2-4-javascript-함수-스코프"><a href="#2-4-javascript-함수-스코프" class="headerlink" title="2/4 javascript 함수, 스코프"></a>2/4 javascript 함수, 스코프</h1><ul>
+<li>함수 호출 순서가 바뀌어도 가능함 - 함수 선언이 암묵적으로 맨 위로 올라감</li>
+<li>함수에 return 이 없으면 undefined 로 return 됨</li>
+<li>문자로 선언된 것을 숫자로 처리할 때 형변환 함<h2 id="CSS-box-model"><a href="#CSS-box-model" class="headerlink" title="CSS -box model"></a>CSS -box model</h2></li>
+<li>border : margin 과 padding의 경계</li>
+<li>collapse : 간격을 없애서 한 선으로 보임</li>
+<li>마진 겹침 : 마진값이 더 큰 쪽을 따르게 됨<ul>
+<li>border 나 padding 값을 주면 해결<ul>
+<li>outline : 내부이동 X, bordder : 내부이동 O <h2 id="javascript-성능"><a href="#javascript-성능" class="headerlink" title="javascript 성능"></a>javascript 성능</h2></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Dom 생성보다는 InnerHTML 사용이 reflow를 최소화 함</li>
+<li>table 은 되도록 사용하지 않음<ul>
+<li>점진적 렌더링이 안됨</li>
+<li>작은 요소 변경으로 전체 테이블이 렌더링 됨</li>
+</ul>
+</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2016/02/05/2016-02-05-javascript 함수,스코프-post/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/02/11/2016-02-11-HTML header-post/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          2/11 HTML header
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2016/02/04/2016-02-04-thread,procss,cache-post/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2/4 thread, procss, cache</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -217,8 +314,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
