@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/10 | 정리방</title>
+  <title>6/30 기본지식 리마인드 | 정리방</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="정리방">
-<meta property="og:url" content="http://yoursite.com/archives/2017/10/index.html">
+  <meta name="description" content="6/30 Spring 지식 리마인드Spring Framework 스프링은 POJO(Plain Old Java Object) 방식의 프레임워크이다.  스프링은 제어 반전(IoC : Inversion of Control)을 지원한다. 컨트롤의 제어권이 사용자가 아니라 프레임워크에 있어서 필요에 따라 스프링에서 사용자의 코드를 호출한다. 요청 시점으로부터 객체가">
+<meta property="og:type" content="article">
+<meta property="og:title" content="6&#x2F;30 기본지식 리마인드">
+<meta property="og:url" content="http://yoursite.com/2019/07/01/2019-06-30-기본지식/index.html">
 <meta property="og:site_name" content="정리방">
+<meta property="og:description" content="6/30 Spring 지식 리마인드Spring Framework 스프링은 POJO(Plain Old Java Object) 방식의 프레임워크이다.  스프링은 제어 반전(IoC : Inversion of Control)을 지원한다. 컨트롤의 제어권이 사용자가 아니라 프레임워크에 있어서 필요에 따라 스프링에서 사용자의 코드를 호출한다. 요청 시점으로부터 객체가">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-29T17:00:51.144Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="정리방">
+<meta name="twitter:title" content="6&#x2F;30 기본지식 리마인드">
+<meta name="twitter:description" content="6/30 Spring 지식 리마인드Spring Framework 스프링은 POJO(Plain Old Java Object) 방식의 프레임워크이다.  스프링은 제어 반전(IoC : Inversion of Control)을 지원한다. 컨트롤의 제어권이 사용자가 아니라 프레임워크에 있어서 필요에 따라 스프링에서 사용자의 코드를 호출한다. 요청 시점으로부터 객체가">
   
     <link rel="alternative" href="/atom.xml" title="정리방" type="application/atom+xml">
   
@@ -128,103 +132,179 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2019-06-30-기본지식" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      6/30 기본지식 리마인드
+    </h1>
+  
+
+        
+        <a href="/2019/07/01/2019-06-30-기본지식/" class="archive-article-date">
+  	<time datetime="2019-06-30T15:24:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="6-30-Spring-지식-리마인드"><a href="#6-30-Spring-지식-리마인드" class="headerlink" title="6/30 Spring 지식 리마인드"></a>6/30 Spring 지식 리마인드</h1><h2 id="Spring-Framework"><a href="#Spring-Framework" class="headerlink" title="Spring Framework"></a>Spring Framework</h2><ul>
+<li>스프링은 POJO(Plain Old Java Object) 방식의 프레임워크이다. </li>
+<li>스프링은 제어 반전(IoC : Inversion of Control)을 지원한다. 컨트롤의 제어권이 사용자가 아니라 프레임워크에 있어서 필요에 따라 스프링에서 사용자의 코드를 호출한다. 요청 시점으로부터 객체가 생성되고 수행된다.<ul>
+<li>제어 반전 컨테이너<br>제어 반전(IoC: Inversion of Control) 컨테이너는 스프링의 가장 중요하고 핵심적인 기능으로서 자바의 reflection을 이용해서 객체의 생명주기를 관리하고 의존성 주입(Dependency Injection)을 통해 각 계층이나 서비스들간의 의존성을 맞춰준다. 이러한 기능들은 주로 환경설정을 담당하는 XML 파일에 의해 설정되고 수행된다.</li>
+</ul>
+</li>
+<li>스프링은 의존성 주입(DI : Dependency Injection)을 지원한다. 각각의 계층이나 서비스들 간에 의존성이 존재할 경우 프레임워크가 서로 연결시켜준다.<br>의존성 주입 방법은 2가지가 있다. </li>
+</ul>
+<ol>
+<li>XML 을 통한 주입</li>
+<li>어노테이션을 통한 주입 </li>
+</ol>
+<ul>
+<li>스프링은 관점 지향 프로그래밍(AOP : Aspect-Oriented Programming)을 지원한다. 따라서 트랜잭션이나 로깅, 보안과 같이 여러 모듈에서 공통적으로 사용하는 기능의 경우 해당 기능을 분리하여 관리할 수 있다.</li>
+<li>스프링은 영속성과 관련된 다양한 서비스를 지원한다. iBATIS나 Hibernate 등 이미 완성도가 높은 데이터베이스 처리 라이브러리와 연결할 수 있는 인터페이스를 제공한다.</li>
+<li>스프링은 확장성이 높다. 스프링 프레임워크에 통합하기 위해 간단하게 기존 라이브러리를 감싸는 정도로 스프링에서 사용이 가능하기 때문에 수많은 라이브러리가 이미 스프링에서 지원되고 있고 스프링에서 사용되는 라이브러리를 별도로 분리하기도 용이하다.</li>
+</ul>
+<h2 id="어노테이션"><a href="#어노테이션" class="headerlink" title="어노테이션"></a>어노테이션</h2><ul>
+<li>사전적으로 ‘주석’이라는 의미이고, 메타데이터라고도 불린다.<br>용도는 1. 문서화, 2. 컴파일러 체크 3. 코드 분석용으로 사용된다.</li>
+</ul>
+<ul>
+<li>메타데이터란?<br>데이터(data)에 대한 데이터이다. 이렇게 흔히들 간단히 정의하지만 엄격하게는, Karen Coyle에 의하면<br>“어떤 목적을 가지고 만들어진 데이터 (Constructed data with a purpose)”라고도 정의한다.</li>
+</ul>
+<h2 id="Java에서-기본적으로-제공하는-어노테이션-종류"><a href="#Java에서-기본적으로-제공하는-어노테이션-종류" class="headerlink" title="Java에서 기본적으로 제공하는 어노테이션 종류"></a>Java에서 기본적으로 제공하는 어노테이션 종류</h2><p>@Override<br>선언한 함수를 오버라이드(재정의) 한다는 것을 나타냅니다.<br>상위 클래스에서 해당 메서드를 찾을 수 없다면 컴파일 에러가 발생한다.<br>@Deprecated<br>해당 메서드가 더 이상 사용되지 않아야 함을 표시한다.<br>추후에 없앨 함수를 표시하는 용도로 씀. 따로 설정을 하지않으면 @Deprecated 된 함수를 썼다고 Exception이 나서 구동되지 않거나 하지는 않는다.<br>@SuppressWarnings<br>선언한 곳의 컴파일 경고를 무시한다.</p>
+<ul>
+<li>@Controller, @Service 의 차이</li>
+</ul>
+<ul>
+<li>둘다 같은 bean 객체를 생성해서 올리는 건데 Controller, Service 구분 용으로 이름만 다르다.</li>
+</ul>
+<ul>
+<li><p>@Autowired 와 @Resource의 차이</p>
+<ul>
+<li>@Autowired: 타입(class)을 우선으로 bean 객체를 검색, 못 찾으면 이름(id) 검색, Spring 만의 어노테이션</li>
+<li>@Resource: 이름(id)을 우선으로 bean 객체를 검색, 못 찾으면 타입(class) 검색, Java의 표준 어노테이션</li>
+</ul>
+<p>TODO // apache, tomcat, cache,batch, message queue, RESTful API, RDB, NoSQL, AOP, reflection</p>
+</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/31/2017-10-31-Spring security/" class="archive-article-date">
-  	<time datetime="2017-10-31T07:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/31/2017-10-31-Spring security/">Spring Security</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/01/2019-06-30-기본지식/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/31/2017-11-15-Promise/" class="archive-article-date">
-  	<time datetime="2017-10-31T07:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/06/30/2019-06-29-기본지식/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">6/29 기본지식 리마인드</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/31/2017-11-15-Promise/">Promise</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/20/2017-10-20-Thread/" class="archive-article-date">
-  	<time datetime="2017-10-20T07:38:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/20/2017-10-20-Thread/">Thread</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -244,8 +324,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

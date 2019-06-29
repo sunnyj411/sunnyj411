@@ -130,6 +130,199 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2019-06-30-기본지식" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/01/2019-06-30-기본지식/">6/30 기본지식 리마인드</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/01/2019-06-30-기본지식/" class="archive-article-date">
+  	<time datetime="2019-06-30T15:24:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="6-30-Spring-지식-리마인드"><a href="#6-30-Spring-지식-리마인드" class="headerlink" title="6/30 Spring 지식 리마인드"></a>6/30 Spring 지식 리마인드</h1><h2 id="Spring-Framework"><a href="#Spring-Framework" class="headerlink" title="Spring Framework"></a>Spring Framework</h2><ul>
+<li>스프링은 POJO(Plain Old Java Object) 방식의 프레임워크이다. </li>
+<li>스프링은 제어 반전(IoC : Inversion of Control)을 지원한다. 컨트롤의 제어권이 사용자가 아니라 프레임워크에 있어서 필요에 따라 스프링에서 사용자의 코드를 호출한다. 요청 시점으로부터 객체가 생성되고 수행된다.<ul>
+<li>제어 반전 컨테이너<br>제어 반전(IoC: Inversion of Control) 컨테이너는 스프링의 가장 중요하고 핵심적인 기능으로서 자바의 reflection을 이용해서 객체의 생명주기를 관리하고 의존성 주입(Dependency Injection)을 통해 각 계층이나 서비스들간의 의존성을 맞춰준다. 이러한 기능들은 주로 환경설정을 담당하는 XML 파일에 의해 설정되고 수행된다.</li>
+</ul>
+</li>
+<li>스프링은 의존성 주입(DI : Dependency Injection)을 지원한다. 각각의 계층이나 서비스들 간에 의존성이 존재할 경우 프레임워크가 서로 연결시켜준다.<br>의존성 주입 방법은 2가지가 있다. </li>
+</ul>
+<ol>
+<li>XML 을 통한 주입</li>
+<li>어노테이션을 통한 주입 </li>
+</ol>
+<ul>
+<li>스프링은 관점 지향 프로그래밍(AOP : Aspect-Oriented Programming)을 지원한다. 따라서 트랜잭션이나 로깅, 보안과 같이 여러 모듈에서 공통적으로 사용하는 기능의 경우 해당 기능을 분리하여 관리할 수 있다.</li>
+<li>스프링은 영속성과 관련된 다양한 서비스를 지원한다. iBATIS나 Hibernate 등 이미 완성도가 높은 데이터베이스 처리 라이브러리와 연결할 수 있는 인터페이스를 제공한다.</li>
+<li>스프링은 확장성이 높다. 스프링 프레임워크에 통합하기 위해 간단하게 기존 라이브러리를 감싸는 정도로 스프링에서 사용이 가능하기 때문에 수많은 라이브러리가 이미 스프링에서 지원되고 있고 스프링에서 사용되는 라이브러리를 별도로 분리하기도 용이하다.</li>
+</ul>
+<h2 id="어노테이션"><a href="#어노테이션" class="headerlink" title="어노테이션"></a>어노테이션</h2><ul>
+<li>사전적으로 ‘주석’이라는 의미이고, 메타데이터라고도 불린다.<br>용도는 1. 문서화, 2. 컴파일러 체크 3. 코드 분석용으로 사용된다.</li>
+</ul>
+<ul>
+<li>메타데이터란?<br>데이터(data)에 대한 데이터이다. 이렇게 흔히들 간단히 정의하지만 엄격하게는, Karen Coyle에 의하면<br>“어떤 목적을 가지고 만들어진 데이터 (Constructed data with a purpose)”라고도 정의한다.</li>
+</ul>
+<h2 id="Java에서-기본적으로-제공하는-어노테이션-종류"><a href="#Java에서-기본적으로-제공하는-어노테이션-종류" class="headerlink" title="Java에서 기본적으로 제공하는 어노테이션 종류"></a>Java에서 기본적으로 제공하는 어노테이션 종류</h2><p>@Override<br>선언한 함수를 오버라이드(재정의) 한다는 것을 나타냅니다.<br>상위 클래스에서 해당 메서드를 찾을 수 없다면 컴파일 에러가 발생한다.<br>@Deprecated<br>해당 메서드가 더 이상 사용되지 않아야 함을 표시한다.<br>추후에 없앨 함수를 표시하는 용도로 씀. 따로 설정을 하지않으면 @Deprecated 된 함수를 썼다고 Exception이 나서 구동되지 않거나 하지는 않는다.<br>@SuppressWarnings<br>선언한 곳의 컴파일 경고를 무시한다.</p>
+<ul>
+<li>@Controller, @Service 의 차이</li>
+</ul>
+<ul>
+<li>둘다 같은 bean 객체를 생성해서 올리는 건데 Controller, Service 구분 용으로 이름만 다르다.</li>
+</ul>
+<ul>
+<li><p>@Autowired 와 @Resource의 차이</p>
+<ul>
+<li>@Autowired: 타입(class)을 우선으로 bean 객체를 검색, 못 찾으면 이름(id) 검색, Spring 만의 어노테이션</li>
+<li>@Resource: 이름(id)을 우선으로 bean 객체를 검색, 못 찾으면 타입(class) 검색, Java의 표준 어노테이션</li>
+</ul>
+<p>TODO // apache, tomcat, cache,batch, message queue, RESTful API, RDB, NoSQL, AOP, reflection</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/01/2019-06-30-기본지식/">GO >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2019-06-29-기본지식" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/30/2019-06-29-기본지식/">6/29 기본지식 리마인드</a>
+    </h1>
+  
+
+        
+        <a href="/2019/06/30/2019-06-29-기본지식/" class="archive-article-date">
+  	<time datetime="2019-06-29T15:27:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="6-30-기본-자료구조-지식-리마인드"><a href="#6-30-기본-자료구조-지식-리마인드" class="headerlink" title="6/30 기본 자료구조 지식 리마인드"></a>6/30 기본 자료구조 지식 리마인드</h1><h2 id="배열"><a href="#배열" class="headerlink" title="배열"></a>배열</h2><ul>
+<li>고정크기를 지정해야하고, 인덱스를 가짐, 메모리에 순차적으로 나열,<br>데이터를 지우면 그 인덱스의 공간이 남아서 메모리 낭비</li>
+</ul>
+<h2 id="리스트"><a href="#리스트" class="headerlink" title="리스트"></a>리스트</h2><ul>
+<li>동적 할당이 가능, 순서가있는 데이터의 집합, 인덱스가 없고,<br>포인터를 통한 접근</li>
+</ul>
+<ul>
+<li>java는 배열과 리스트를 분리해서 사용하고<br>javascript 에서는 배열에 리스트의 기능이 추가되어있음 </li>
+</ul>
+<h2 id="스택"><a href="#스택" class="headerlink" title="스택"></a>스택</h2><ul>
+<li>데이터를 후입선출 방식으로 처리하는 자료구조</li>
+</ul>
+<h2 id="해시테이블"><a href="#해시테이블" class="headerlink" title="해시테이블"></a>해시테이블</h2><ul>
+<li>데이터를 key-value로 관리하고, key값을 해싱해서 배열의 인덱스로 사용함.<br>데이터를 검색 시 가장 빠르고 탐색시 빅오 O(1)의 성능을 냄<br>해시가 같은 경우가 생길 수 있는데 그때는 그뒤의 주소로 리스트로 연결해서 관리 함.<br>동기화 지원</li>
+</ul>
+<h2 id="해시"><a href="#해시" class="headerlink" title="해시"></a>해시</h2><ul>
+<li>해시는 복호 화 할수 없고, 해시 함수 종류는 MD5, SHA-1, SHA 256 등이 있는데<br>MD5(31자리의 16진수 값을 리턴)는 이미 해시 충돌이 발견되어서 SHA-1 이상의 해시함수 사용이 권장됨<ul>
+<li>내가 했던 프로젝트에서는 해시 함수에 내부 비밀 키를 붙여서 같이 해시 함수를 구했음</li>
+</ul>
+</li>
+</ul>
+<h2 id="해시-함수-hash-function"><a href="#해시-함수-hash-function" class="headerlink" title="해시 함수(hash function)"></a>해시 함수(hash function)</h2><ul>
+<li>임의의 길이의 데이터를 고정된 길이의 데이터로 매핑하는 함수</li>
+</ul>
+<h2 id="해시맵"><a href="#해시맵" class="headerlink" title="해시맵"></a>해시맵</h2><ul>
+<li>동기화 지원X, 멀티 쓰레드 환경에서는 사용하지 않는 것을 권장</li>
+</ul>
+<ul>
+<li>해시테이블, 해시맵 둘다 Map 인터페이스를 상속받아 구현되어 데이터를 key-value로 관리하는 자료구조</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/30/2019-06-29-기본지식/">GO >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2018-09-10-XML과 JSON-post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -542,6 +735,72 @@
 
 
   
+    <article id="post-2017-10-31-Spring security" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/31/2017-10-31-Spring security/">Spring Security</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/31/2017-10-31-Spring security/" class="archive-article-date">
+  	<time datetime="2017-10-31T07:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Spring-Security"><a href="#Spring-Security" class="headerlink" title="Spring Security"></a>Spring Security</h2><ul>
+<li>X-frame option : iframe에 접근 보안 설정, 디폴트는 ‘DENY’</li>
+<li>‘SAME ORIGIN’ : parent URL과 접근하는 iframe parent URL 과 같으면 허용</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/31/2017-10-31-Spring security/">GO >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2017-11-15-Promise" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -583,72 +842,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/10/31/2017-11-15-Promise/">GO >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017-10-31-Spring security" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/31/2017-10-31-Spring security/">Spring Security</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/31/2017-10-31-Spring security/" class="archive-article-date">
-  	<time datetime="2017-10-31T07:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Spring-Security"><a href="#Spring-Security" class="headerlink" title="Spring Security"></a>Spring Security</h2><ul>
-<li>X-frame option : iframe에 접근 보안 설정, 디폴트는 ‘DENY’</li>
-<li>‘SAME ORIGIN’ : parent URL과 접근하는 iframe parent URL 과 같으면 허용</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/31/2017-10-31-Spring security/">GO >></a>
         </p>
       
 
@@ -744,147 +937,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/10/20/2017-10-20-Thread/">GO >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017-08-06-junit테스트코드" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/06/2017-08-06-junit테스트코드/">doReturn과 when-then의 차이</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/06/2017-08-06-junit테스트코드/" class="archive-article-date">
-  	<time datetime="2017-08-06T07:19:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="doReturn"><a href="#doReturn" class="headerlink" title="doReturn"></a>doReturn</h2><p>함수가 어떻든지 간에 결과 값만 바꿔치기 함. Spy일 때 주로 사용함</p>
-<h2 id="when-then"><a href="#when-then" class="headerlink" title="when-then"></a>when-then</h2><ul>
-<li>해당 함수를 미리 실행하고 결과 값을 바꿈 </li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/06/2017-08-06-junit테스트코드/">GO >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017-08-05-MIME" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/05/2017-08-05-MIME/">MIME</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/05/2017-08-05-MIME/" class="archive-article-date">
-  	<time datetime="2017-08-05T07:18:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="MIME"><a href="#MIME" class="headerlink" title="MIME"></a>MIME</h2><p>Multi purpose Internet Mail Extension</p>
-<h2 id="multipart"><a href="#multipart" class="headerlink" title="multipart"></a>multipart</h2><ul>
-<li>바운더리를 정하고 그것으로 각 파트를 나눔</li>
-<li>종류<ul>
-<li>mixed : 여러 컨텐츠가 모여 전체 메시지를 이룸  ex) 파일 첨부</li>
-<li>alterative : text/plain or text/html</li>
-<li>relate : 본문안에 있는 내용을 참조 ex) content-id, content-location</li>
-</ul>
-</li>
-</ul>
-<h2 id="MHTML"><a href="#MHTML" class="headerlink" title="MHTML"></a>MHTML</h2><ul>
-<li>집합적인 HTML 문서를 MIME 으로 묶는 방법, MIME 으로 묶은 HTML 문서 (/related)</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/05/2017-08-05-MIME/">GO >></a>
         </p>
       
 
