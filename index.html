@@ -381,6 +381,13 @@
 <li>연결이 설정되면, client와 server가 양방향으로 웹 소켓 데이터 or 텍스트 프레임을 보낼 수 있음</li>
 <li>웹에서 게임, 실시간 주식 차트와 같은 실시간이 요구되는 응용프로그램의 개발을 한층 효과적으로 구현 가능</li>
 </ul>
+<h2 id="쿠키-세션"><a href="#쿠키-세션" class="headerlink" title="쿠키/세션"></a>쿠키/세션</h2><ul>
+<li>브라우저가 종료되면 쿠키도 함께 삭제된다고 하지만 사실 종료시에 쿠키가 반드시 삭제된다고 보장할수는 없음. </li>
+<li>주로 웹 브라우저에 쿠키를 암호화해서 저장함. </li>
+<li>쿠키 정보가 클라이언트에 있으므로 어느 WAS에서도 인증이 가능함. </li>
+<li>세션은 WAS끼리 공유가 안되기 때문에 이를 보완하기 위해 세션클러스터링을 하게 되는데, 이는 여러 서버가 세션을 동일하게 관리할 수 있게 해주는 것임. 하지만 WAS간의 세션 동기화 문제가 있음. 또 세션을 서버 메모리에 저장하면  메모리는 휘발성이므로 서버가 다운되거나 할 경우 인증 정보가 사라지게 됨.</li>
+<li>세션은 메모리에 저장할 수도 있고, 파일, DB에도 저장할 수 있음.</li>
+</ul>
 
       
 
@@ -871,6 +878,72 @@
 
 
   
+    <article id="post-2017-10-31-Spring security" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/31/2017-10-31-Spring security/">Spring Security</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/31/2017-10-31-Spring security/" class="archive-article-date">
+  	<time datetime="2017-10-31T07:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Spring-Security"><a href="#Spring-Security" class="headerlink" title="Spring Security"></a>Spring Security</h2><ul>
+<li>X-frame option : iframe에 접근 보안 설정, 디폴트는 ‘DENY’</li>
+<li>‘SAME ORIGIN’ : parent URL과 접근하는 iframe parent URL 과 같으면 허용</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/31/2017-10-31-Spring security/">GO >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2017-11-15-Promise" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -912,72 +985,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/10/31/2017-11-15-Promise/">GO >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017-10-31-Spring security" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/31/2017-10-31-Spring security/">Spring Security</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/31/2017-10-31-Spring security/" class="archive-article-date">
-  	<time datetime="2017-10-31T07:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Spring-Security"><a href="#Spring-Security" class="headerlink" title="Spring Security"></a>Spring Security</h2><ul>
-<li>X-frame option : iframe에 접근 보안 설정, 디폴트는 ‘DENY’</li>
-<li>‘SAME ORIGIN’ : parent URL과 접근하는 iframe parent URL 과 같으면 허용</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/31/2017-10-31-Spring security/">GO >></a>
         </p>
       
 
