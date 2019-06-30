@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="정리방">
 <meta property="og:description" content="6/30 기본 자료구조 지식 리마인드배열 고정크기를 지정해야하고, 인덱스를 가짐, 메모리에 순차적으로 나열,데이터를 지우면 그 인덱스의 공간이 남아서 메모리 낭비  리스트 동적 할당이 가능, 순서가있는 데이터의 집합, 인덱스가 없고,포인터를 통한 접근   java는 배열과 리스트를 분리해서 사용하고javascript 에서는 배열에 리스트의 기능이 추가되어있">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-30T14:45:23.062Z">
+<meta property="og:updated_time" content="2019-06-30T15:02:37.168Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="기본 지식 리마인드">
 <meta name="twitter:description" content="6/30 기본 자료구조 지식 리마인드배열 고정크기를 지정해야하고, 인덱스를 가짐, 메모리에 순차적으로 나열,데이터를 지우면 그 인덱스의 공간이 남아서 메모리 낭비  리스트 동적 할당이 가능, 순서가있는 데이터의 집합, 인덱스가 없고,포인터를 통한 접근   java는 배열과 리스트를 분리해서 사용하고javascript 에서는 배열에 리스트의 기능이 추가되어있">
@@ -189,6 +189,21 @@
 <h2 id="너비-우선-탐색-BFS-Breadth-First-Search"><a href="#너비-우선-탐색-BFS-Breadth-First-Search" class="headerlink" title="너비 우선 탐색 (BFS, Breadth-First Search)"></a>너비 우선 탐색 (BFS, Breadth-First Search)</h2><ul>
 <li>루트 노드(혹은 다른 임의의 노드)에서 시작해서 인접한 노드를 먼저 탐색하는 방법</li>
 <li>큐를 이용해서 구현</li>
+</ul>
+<h2 id="Polling"><a href="#Polling" class="headerlink" title="Polling"></a>Polling</h2><ul>
+<li>브라우저가 일정한 주기로 HTTP 요청을 보내는 방식</li>
+<li>보통 실시간 데이터의 업데이트 주기는 예측하기 어려우므로, 그에 따른 불필요한 서버 요청이 다수 생김</li>
+</ul>
+<h2 id="Long-Polling"><a href="#Long-Polling" class="headerlink" title="Long Polling"></a>Long Polling</h2><ul>
+<li>HTTP 요청 시 서버는 해당 요청을 일정 시간 동안 대기 시키고, 대기 시간 안에 데이터가 업데이트되었다면, 클라이언트에게 응답을 보내고 전달받은 데이터를 처리 후 서버로 재요청을 시작함</li>
+</ul>
+<h2 id="Web-Socket"><a href="#Web-Socket" class="headerlink" title="Web Socket"></a>Web Socket</h2><ul>
+<li>HTTP 프로토콜의 단방향 통신이 아닌 양방 통신.</li>
+<li>웹 소켓 연결하기 위해, client는 server 웹소켓 handshake 응답을 위한 웹 소켓 handshake 요청을 전송 → 연결이 설정되면 양방향 바이너리 프로토콜로 전환 → 연결이 된 후로는 양방향 통신이므로 변경사항이 있을 때, client로 메시지 전송을 하고 client가 응답함</li>
+<li>upgrade 헤더가 추가 되고 client는 Sec-WebSocket-Key 헤더를 보냄 그리고 server는 Sec-WebSocket-Accept 헤더 해시 키와 함께 응답</li>
+<li>authentication, privacy or integrity를 제공하지 않음</li>
+<li>연결이 설정되면, client와 server가 양방향으로 웹 소켓 데이터 or 텍스트 프레임을 보낼 수 있음</li>
+<li>웹에서 게임, 실시간 주식 차트와 같은 실시간이 요구되는 응용프로그램의 개발을 한층 효과적으로 구현 가능</li>
 </ul>
 
       

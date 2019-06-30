@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>cache | 정리방</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Cache CPU와 RAM 사이의 버퍼 역할을 하는 매우 빠른 메모리 타입  서버 캐싱 캐시 서버 : 캐싱만을 전용으로 하는 서버를 둠 프록시 서버 : 다수의 클라이언트를 대신하여 일을 할 수 있는 서버  브라우저 캐싱 웹 브라우저가 자신이 소속되어있는 로컬 하드디스크에 캐시 저장  Cache-Control :cache-request-directive=“n">
+  <meta name="description" content="Cache CPU와 RAM 사이의 버퍼 역할을 하는 매우 빠른 메모리 타입  서버 캐싱 캐시 서버 : 캐싱만을 전용으로 하는 서버를 둠 프록시 서버 : server와 client 사이에서 중계기로서 대리로 통신을 수행하는 서버  브라우저 캐싱 웹 브라우저가 자신이 소속되어있는 로컬 하드디스크에 캐시 저장  Cache-Control :cache-request">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cache">
 <meta property="og:url" content="http://yoursite.com/2017/11/21/2017-11-21-cache-post/index.html">
 <meta property="og:site_name" content="정리방">
-<meta property="og:description" content="Cache CPU와 RAM 사이의 버퍼 역할을 하는 매우 빠른 메모리 타입  서버 캐싱 캐시 서버 : 캐싱만을 전용으로 하는 서버를 둠 프록시 서버 : 다수의 클라이언트를 대신하여 일을 할 수 있는 서버  브라우저 캐싱 웹 브라우저가 자신이 소속되어있는 로컬 하드디스크에 캐시 저장  Cache-Control :cache-request-directive=“n">
+<meta property="og:description" content="Cache CPU와 RAM 사이의 버퍼 역할을 하는 매우 빠른 메모리 타입  서버 캐싱 캐시 서버 : 캐싱만을 전용으로 하는 서버를 둠 프록시 서버 : server와 client 사이에서 중계기로서 대리로 통신을 수행하는 서버  브라우저 캐싱 웹 브라우저가 자신이 소속되어있는 로컬 하드디스크에 캐시 저장  Cache-Control :cache-request">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-30T13:59:37.967Z">
+<meta property="og:updated_time" content="2019-06-30T14:58:52.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cache">
-<meta name="twitter:description" content="Cache CPU와 RAM 사이의 버퍼 역할을 하는 매우 빠른 메모리 타입  서버 캐싱 캐시 서버 : 캐싱만을 전용으로 하는 서버를 둠 프록시 서버 : 다수의 클라이언트를 대신하여 일을 할 수 있는 서버  브라우저 캐싱 웹 브라우저가 자신이 소속되어있는 로컬 하드디스크에 캐시 저장  Cache-Control :cache-request-directive=“n">
+<meta name="twitter:description" content="Cache CPU와 RAM 사이의 버퍼 역할을 하는 매우 빠른 메모리 타입  서버 캐싱 캐시 서버 : 캐싱만을 전용으로 하는 서버를 둠 프록시 서버 : server와 client 사이에서 중계기로서 대리로 통신을 수행하는 서버  브라우저 캐싱 웹 브라우저가 자신이 소속되어있는 로컬 하드디스크에 캐시 저장  Cache-Control :cache-request">
   
     <link rel="alternative" href="/atom.xml" title="정리방" type="application/atom+xml">
   
@@ -157,7 +157,7 @@
 </ul>
 <h2 id="서버-캐싱"><a href="#서버-캐싱" class="headerlink" title="서버 캐싱"></a>서버 캐싱</h2><ul>
 <li>캐시 서버 : 캐싱만을 전용으로 하는 서버를 둠</li>
-<li>프록시 서버 : 다수의 클라이언트를 대신하여 일을 할 수 있는 서버</li>
+<li>프록시 서버 : server와 client 사이에서 중계기로서 대리로 통신을 수행하는 서버</li>
 </ul>
 <h2 id="브라우저-캐싱"><a href="#브라우저-캐싱" class="headerlink" title="브라우저 캐싱"></a>브라우저 캐싱</h2><ul>
 <li>웹 브라우저가 자신이 소속되어있는 로컬 하드디스크에 캐시 저장</li>
@@ -169,6 +169,26 @@
 <li>시간을 정해서 갱신</li>
 <li>캐시 메모리가 너무 많으면 탐색 비용이 많이 들어서 느려짐</li>
 <li>LRU - 많이쓰는 것 순으로 정렬해서 더 빠르게 함 </li>
+</ul>
+<ul>
+<li><p>프록시</p>
+<h2 id="프록시"><a href="#프록시" class="headerlink" title="프록시"></a>프록시</h2><ul>
+<li>server와 client 사이에서 중계기로서 대리로 통신을 수행하는 기능</li>
+<li>그 중계 기능을 하는 것을 Proxy Server</li>
+</ul>
+</li>
+</ul>
+<h2 id="Proxy-server를-구축하는-이유"><a href="#Proxy-server를-구축하는-이유" class="headerlink" title="Proxy server를 구축하는 이유"></a>Proxy server를 구축하는 이유</h2><ul>
+<li>보안: 익명의 사용자가 서버에 직접 접근하는 것을 막음, 보안을 위해 익명으로 컴퓨터를 유지 </li>
+<li>속도: 웹 프록시는 웹 서버로부터 웹 페이지를 캐시로 저장하는 데 흔히 쓰임, 이는 속도를 높임</li>
+<li>ACL: access control list, 사이트 접근에 대한 접근 정책 정의 가능 </li>
+<li>Log/Audit: 회사내 직원의 인터넷/인트라넷 사용 레포팅 가능</li>
+<li>지역 네트워크의 제한을 우회하기 위해 </li>
+</ul>
+<h2 id="Proxy-종류"><a href="#Proxy-종류" class="headerlink" title="Proxy 종류"></a>Proxy 종류</h2><ul>
+<li>Forward Proxy</li>
+<li>Reverse Proxy : 리버스 프록시 서버와 관련된 URI만 웹 브라우저 사용자에게 공개됨. 사용자는 이 URI을 사용하여 리버스 프록시 서버에 액세스하고, 리버스 프록시 서버는 사용자의 요청을 처리할 적절한 내부 서버로 경로를 재지정함. 리버스 프록시 서버를 이용하면 로드 밸런싱을 통해 서버의 부하를 분산시킬 수 있음. 각 서버의 부하를 덜어준만큼 웹 서버의 속도가 증대됨. 보안성이 있음. 중앙 집중식 log 작성과 감시를 할 수 있음.</li>
+<li>Open Proxy</li>
 </ul>
 
       
