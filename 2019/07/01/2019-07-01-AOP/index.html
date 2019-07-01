@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | 정리방</title>
+  <title>AOP | 정리방</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="정리방">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="7/1 AOPAOP “Aspect-Oriented Programming”의 약자 프로그램에 처리해야 하는 다양한 관점을 분리시킨 다음 각각의 관점 별로 구현을 한 후이들을 조합하여 완성된 프로그램을 만들고자하는 개념 기능을 핵심 비지니스 로직과 공통 모듈로 구분하고, 핵심 로직에 영향을 미치지 않고 사이사이에 공통 모듈을 효과적으로 잘 끼워넣도록 하는 개발">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AOP">
+<meta property="og:url" content="http://yoursite.com/2019/07/01/2019-07-01-AOP/index.html">
 <meta property="og:site_name" content="정리방">
+<meta property="og:description" content="7/1 AOPAOP “Aspect-Oriented Programming”의 약자 프로그램에 처리해야 하는 다양한 관점을 분리시킨 다음 각각의 관점 별로 구현을 한 후이들을 조합하여 완성된 프로그램을 만들고자하는 개념 기능을 핵심 비지니스 로직과 공통 모듈로 구분하고, 핵심 로직에 영향을 미치지 않고 사이사이에 공통 모듈을 효과적으로 잘 끼워넣도록 하는 개발">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-01T15:22:00.570Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="정리방">
+<meta name="twitter:title" content="AOP">
+<meta name="twitter:description" content="7/1 AOPAOP “Aspect-Oriented Programming”의 약자 프로그램에 처리해야 하는 다양한 관점을 분리시킨 다음 각각의 관점 별로 구현을 한 후이들을 조합하여 완성된 프로그램을 만들고자하는 개념 기능을 핵심 비지니스 로직과 공통 모듈로 구분하고, 핵심 로직에 영향을 미치지 않고 사이사이에 공통 모듈을 효과적으로 잘 끼워넣도록 하는 개발">
   
     <link rel="alternative" href="/atom.xml" title="정리방" type="application/atom+xml">
   
@@ -128,211 +132,175 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2019-07-01-AOP" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      AOP
+    </h1>
+  
+
+        
+        <a href="/2019/07/01/2019-07-01-AOP/" class="archive-article-date">
+  	<time datetime="2019-07-01T13:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="7-1-AOP"><a href="#7-1-AOP" class="headerlink" title="7/1 AOP"></a>7/1 AOP</h1><h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2><ul>
+<li>“Aspect-Oriented Programming”의 약자</li>
+<li>프로그램에 처리해야 하는 다양한 관점을 분리시킨 다음 각각의 관점 별로 구현을 한 후<br>이들을 조합하여 완성된 프로그램을 만들고자하는 개념</li>
+<li>기능을 핵심 비지니스 로직과 공통 모듈로 구분하고, 핵심 로직에 영향을 미치지 않고 사이사이에 공통 모듈을 효과적으로 잘 끼워넣도록 하는 개발 방법</li>
+<li>애플리케이션 객체는 원래 해야 할 일인 비즈니스 로직을 수행하는 것 외에는<br>아무것도 하지않음</li>
+<li>로깅이나 트랜잭션 지원과 같은 요소를 만든 후에 코드 밖에서 비즈니스 로직 사이에 필요할 때 삽입하여 코드 밖에서 설정된다는 것이 핵심(DB 커넥션을 하려면 원래라면 연결하는 구문 하나하나 작성해야하지만 )</li>
+</ul>
+<ul>
+<li>spring framework aop : 자바의 proxy 클래스를 이용하여 구현되어있음</li>
+<li>proxy 클래스 : invocationHandler와 함께 사용되는 클래스임</li>
+</ul>
+<h2 id="Proxy-객체"><a href="#Proxy-객체" class="headerlink" title="Proxy 객체"></a>Proxy 객체</h2><ul>
+<li>실제 개발자가 정의한 클래스를 상속받은 또 다른 클래스에 의해 생성된 객체</li>
+<li>프로그램이 실행되는 시점에 JVM에 의해 클래스를 만든 후 객체를 생성</li>
+<li>프록시 기술을 이용한다면, target 클래스 작성시 특별함 없이 POJO로 작성 (Interface로 정의)</li>
+<li>proxy 생성법 : spring ioc 컨테이너가 제공하는 factorybean방식을 지원하는 proxyfactorybean 이용</li>
+</ul>
+<h2 id="인터페이스를-구현하는-이유"><a href="#인터페이스를-구현하는-이유" class="headerlink" title="인터페이스를 구현하는 이유"></a>인터페이스를 구현하는 이유</h2><ul>
+<li>실제 서비스를 제공해주는 클래스의 추상화 목적</li>
+<li>proxy 기술을 이용할 경우 이 인터페이스가 프록시의 인터페이스로 사용되기 때문</li>
+<li>동적으로 proxy 클래스를 만들어주는 기술을 dynamic proxy라고함</li>
+</ul>
+<h2 id="스프링에서-AOP-구현방식"><a href="#스프링에서-AOP-구현방식" class="headerlink" title="스프링에서 AOP 구현방식"></a>스프링에서 AOP 구현방식</h2><ol>
+<li>XML 스키마 기반의 AOP구현</li>
+<li>@Aspect 어노테이션 기반의 AOP 구현</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/21/2017-11-21-cache-post/" class="archive-article-date">
-  	<time datetime="2017-11-21T14:14:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/21/2017-11-21-cache-post/">cache</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/01/2019-07-01-AOP/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/20/2017-11-20-etc/" class="archive-article-date">
-  	<time datetime="2017-11-20T08:21:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-20</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/07/01/2019-07-02-DB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          DB
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/01/2019-07-01-RESTful/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">RESTful</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/20/2017-11-20-etc/">etc</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/31/2017-11-15-Promise/" class="archive-article-date">
-  	<time datetime="2017-10-31T07:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/31/2017-11-15-Promise/">Promise</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/31/2017-10-31-Spring security/" class="archive-article-date">
-  	<time datetime="2017-10-31T07:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/31/2017-10-31-Spring security/">Spring Security</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/20/2017-10-20-Thread/" class="archive-article-date">
-  	<time datetime="2017-10-20T07:38:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/20/2017-10-20-Thread/">Thread</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/06/2017-08-06-junit테스트코드/" class="archive-article-date">
-  	<time datetime="2017-08-06T07:19:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/06/2017-08-06-junit테스트코드/">doReturn과 when-then의 차이</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/05/2017-08-05-MIME/" class="archive-article-date">
-  	<time datetime="2017-08-05T07:18:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/05/2017-08-05-MIME/">MIME</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -352,8 +320,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

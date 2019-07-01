@@ -130,6 +130,261 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2019-07-02-DB" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/01/2019-07-02-DB/">DB</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/01/2019-07-02-DB/" class="archive-article-date">
+  	<time datetime="2019-07-01T13:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="7-2-RDB-NoSQL"><a href="#7-2-RDB-NoSQL" class="headerlink" title="7/2 RDB, NoSQL"></a>7/2 RDB, NoSQL</h1><h2 id="RDB"><a href="#RDB" class="headerlink" title="RDB"></a>RDB</h2><ul>
+<li>RDB는 관계형 데이터베이스며, 대표적으로 Mysql, Oracle 등이 있다</li>
+</ul>
+<p>특징</p>
+<ul>
+<li>테이블(Table) 마다 스키마(Schema)를 정의해야 됩니다.</li>
+<li>데이터 타입과 제약(Constraint)를 통해서 데이터의 정확성을 보장합니다.</li>
+<li>SQL 질의문을 통해 요청을 처리합니다.</li>
+<li>성능을 높이려며 하드웨어(H/W)를 고성능으로 교체해야 된다. (Scale Up)</li>
+<li>고성능 하드웨어는 가격이 비싸기 때문에, RDB의 성능을 높이거나 확장하기 어렵기 때문에 확장성에 좋지 않습니다.</li>
+</ul>
+<h2 id="NoSQL"><a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL</h2><ul>
+<li>RDB의 확장성 이슈를 해결하기 위해 나온 DB 모델이고, Redis(Key-value), MongoDB(document-oriented) 등이 있다</li>
+<li>가장 많이쓰이는 NoSQL은 Key-value 형식으로 데이터를 관리한다</li>
+<li>SQL을 사용하지 않는다</li>
+</ul>
+<h2 id="In-Memory-저장소"><a href="#In-Memory-저장소" class="headerlink" title="In-Memory 저장소"></a>In-Memory 저장소</h2><ul>
+<li>redis는 In-Memory 저장소로, NoSQL 방식에 속하는 데이터베이스이며, key-value방식을 사용한다. </li>
+</ul>
+<h2 id="In-memory-특징"><a href="#In-memory-특징" class="headerlink" title="In-memory 특징"></a>In-memory 특징</h2><ul>
+<li>Memory의 가격이 용량대비 충분히 낮아지면서 빠른 DB 성능을 위해 생겼다</li>
+<li>데이터가 Disk + memory에 저장된다. I/O 성능을 높인다 (SSD처럼)</li>
+<li>프로세스가 내려가거나 장비가 shutdown 되더라도 Data의 복구가 가능하다.</li>
+<li>저장소 메모리를 재사용하지 않는다 </li>
+<li>Redis, LMDB 등이 있다</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/01/2019-07-02-DB/">GO >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2019-07-01-AOP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/01/2019-07-01-AOP/">AOP</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/01/2019-07-01-AOP/" class="archive-article-date">
+  	<time datetime="2019-07-01T13:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="7-1-AOP"><a href="#7-1-AOP" class="headerlink" title="7/1 AOP"></a>7/1 AOP</h1><h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2><ul>
+<li>“Aspect-Oriented Programming”의 약자</li>
+<li>프로그램에 처리해야 하는 다양한 관점을 분리시킨 다음 각각의 관점 별로 구현을 한 후<br>이들을 조합하여 완성된 프로그램을 만들고자하는 개념</li>
+<li>기능을 핵심 비지니스 로직과 공통 모듈로 구분하고, 핵심 로직에 영향을 미치지 않고 사이사이에 공통 모듈을 효과적으로 잘 끼워넣도록 하는 개발 방법</li>
+<li>애플리케이션 객체는 원래 해야 할 일인 비즈니스 로직을 수행하는 것 외에는<br>아무것도 하지않음</li>
+<li>로깅이나 트랜잭션 지원과 같은 요소를 만든 후에 코드 밖에서 비즈니스 로직 사이에 필요할 때 삽입하여 코드 밖에서 설정된다는 것이 핵심(DB 커넥션을 하려면 원래라면 연결하는 구문 하나하나 작성해야하지만 )</li>
+</ul>
+<ul>
+<li>spring framework aop : 자바의 proxy 클래스를 이용하여 구현되어있음</li>
+<li>proxy 클래스 : invocationHandler와 함께 사용되는 클래스임</li>
+</ul>
+<h2 id="Proxy-객체"><a href="#Proxy-객체" class="headerlink" title="Proxy 객체"></a>Proxy 객체</h2><ul>
+<li>실제 개발자가 정의한 클래스를 상속받은 또 다른 클래스에 의해 생성된 객체</li>
+<li>프로그램이 실행되는 시점에 JVM에 의해 클래스를 만든 후 객체를 생성</li>
+<li>프록시 기술을 이용한다면, target 클래스 작성시 특별함 없이 POJO로 작성 (Interface로 정의)</li>
+<li>proxy 생성법 : spring ioc 컨테이너가 제공하는 factorybean방식을 지원하는 proxyfactorybean 이용</li>
+</ul>
+<h2 id="인터페이스를-구현하는-이유"><a href="#인터페이스를-구현하는-이유" class="headerlink" title="인터페이스를 구현하는 이유"></a>인터페이스를 구현하는 이유</h2><ul>
+<li>실제 서비스를 제공해주는 클래스의 추상화 목적</li>
+<li>proxy 기술을 이용할 경우 이 인터페이스가 프록시의 인터페이스로 사용되기 때문</li>
+<li>동적으로 proxy 클래스를 만들어주는 기술을 dynamic proxy라고함</li>
+</ul>
+<h2 id="스프링에서-AOP-구현방식"><a href="#스프링에서-AOP-구현방식" class="headerlink" title="스프링에서 AOP 구현방식"></a>스프링에서 AOP 구현방식</h2><ol>
+<li>XML 스키마 기반의 AOP구현</li>
+<li>@Aspect 어노테이션 기반의 AOP 구현</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/01/2019-07-01-AOP/">GO >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2019-07-01-RESTful" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/01/2019-07-01-RESTful/">RESTful</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/01/2019-07-01-RESTful/" class="archive-article-date">
+  	<time datetime="2019-07-01T13:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="7-1-RESTful"><a href="#7-1-RESTful" class="headerlink" title="7/1 RESTful"></a>7/1 RESTful</h1><h2 id="REST"><a href="#REST" class="headerlink" title="REST"></a>REST</h2><ul>
+<li>“Representational State Transfer” 의 약자</li>
+<li>자원을 이름으로 구분하여 해당 자원의 상태(정보)를 주고 받는 모든 것을 의미</li>
+</ul>
+<h2 id="RESTful"><a href="#RESTful" class="headerlink" title="RESTful"></a>RESTful</h2><ul>
+<li>URI(Uniform Resource Identifier)를 통해 자원(Resource)을 명시하고, HTTP 메소드를 통해 객체화된 서비스에 접근하는것</li>
+</ul>
+<h2 id="RESTful-API-Application-Programming-Interface"><a href="#RESTful-API-Application-Programming-Interface" class="headerlink" title="RESTful API(Application Programming Interface)"></a>RESTful API(Application Programming Interface)</h2><ul>
+<li>REST 기반으로 서비스 API를 구현한 것</li>
+</ul>
+<h2 id="URI-와-URL"><a href="#URI-와-URL" class="headerlink" title="URI 와 URL"></a>URI 와 URL</h2><ul>
+<li>URL (Uniform Resource Locator) : 정영화 된 리소스 위치 표시 라는 뜻</li>
+<li>URI (Uniform Resource Identifier) : 정형화 된 리소스 식별자 라는 뜻</li>
+<li>예전에는 URL이 가리키는게 자원(파일) 위치 였는데, 예를들어 ‘<a href="http://test.com/folder/sample.txt&#39;" target="_blank" rel="noopener">http://test.com/folder/sample.txt&#39;</a> 처럼 실제 파일의 위치와 파일명을 가리켰는데 요즘에는 ‘<a href="http://test.com/getfile/0&#39;" target="_blank" rel="noopener">http://test.com/getfile/0&#39;</a> 처럼 파일 위치나 파일명을 가리키는 것이 아니라 내부적으로 사용하는 식별자를 쓰는데 이것을 URI라고 한다.</li>
+<li>URI가 URL보다 상위 개념이다</li>
+<li>URI = URL + URN</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/01/2019-07-01-RESTful/">GO >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2019-06-30-Spring 지식 리마인드" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -751,240 +1006,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/11/21/2017-11-21-cache-post/">GO >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017-11-20-etc" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/20/2017-11-20-etc/">etc</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/20/2017-11-20-etc/" class="archive-article-date">
-  	<time datetime="2017-11-20T08:21:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h2><p>Spring Data JPA </p>
-<ul>
-<li>벤더 독립성 : 표준 query는 가능하지만 특화된 것들은 일일이 맞춰줘야 함</li>
-</ul>
-<p>Java</p>
-<ul>
-<li>Stream : 흐름, 데이터를 실시간으로 처리함, 데이터를 흘려보내고 말기 때문에 메모리를 덜 소요함</li>
-<li>Serialize : 데이터를 (선형구조) 일자로 만들어서 메모리에 쉽게 올리고 내릴 수 있음</li>
-<li>Java IO : 스트림 방식</li>
-<li>NIO : ByteBuffer 채널 방식</li>
-</ul>
-<p>포맷</p>
-<ul>
-<li>그림 : BMP, PNG, JPEG</li>
-<li>HEIF (이미지 포맷)<ul>
-<li>HEVC : 동영상을 고효율로 압축, 아이폰에서 사진 찍으면 .heic 확장자로 저장 됨</li>
-<li>H.264 : 동영상 압축 확장자 (.arci)<ul>
-<li>압축 코덱 지원</li>
-<li>하드웨어 가속</li>
-<li>병렬 처리하기 위해, 메모리가 적게들어서 타일을 씀 </li>
-<li>투명도 채널</li>
-<li>애니메이션 지원(gif)</li>
-<li>이미지 스퀀스 압축 지원</li>
-</ul>
-</li>
-<li>windows 10 지원</li>
-<li>GPAC, MP4 box(오픈소스) 지원 </li>
-</ul>
-</li>
-</ul>
-<h2 id="etc-용어"><a href="#etc-용어" class="headerlink" title="etc 용어"></a>etc 용어</h2><ul>
-<li>dpi : Dot per inch, 인치당 표현되는 점 수</li>
-<li>OTP : One Time Password</li>
-<li>OOM : Out Of Memory</li>
-<li>UUID : 고유한 식별자지만 완전하지는 않고, 중복될 가능성이 매우 낮음</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/20/2017-11-20-etc/">GO >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017-10-31-Spring security" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/31/2017-10-31-Spring security/">Spring Security</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/31/2017-10-31-Spring security/" class="archive-article-date">
-  	<time datetime="2017-10-31T07:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Spring-Security"><a href="#Spring-Security" class="headerlink" title="Spring Security"></a>Spring Security</h2><ul>
-<li>X-frame option : iframe에 접근 보안 설정, 디폴트는 ‘DENY’</li>
-<li>‘SAME ORIGIN’ : parent URL과 접근하는 iframe parent URL 과 같으면 허용</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/31/2017-10-31-Spring security/">GO >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2017-11-15-Promise" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/31/2017-11-15-Promise/">Promise</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/31/2017-11-15-Promise/" class="archive-article-date">
-  	<time datetime="2017-10-31T07:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h2><ul>
-<li>이후 비동기 작업을 마친 뒤 결과물을 잘 줄 수 있으면 resolve, 실패하면 reject</li>
-<li>Promise() 를 호출하면 Promise 객체가 리턴됨</li>
-<li>then 을 호출해서 비동기 작업이 완료되면 결과에 따라 성공/실패 출력</li>
-</ul>
-<h2 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h2><ul>
-<li>Promise 는 IE에서 X, edge는 가능</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/31/2017-11-15-Promise/">GO >></a>
         </p>
       
 
