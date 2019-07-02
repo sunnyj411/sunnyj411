@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>2/4 thread, procss | 정리방</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2/4 thread, procss thread : 쓰레드끼리 메모리 공유, 동기화 process : 프로세스 위에 Thread가 동작하고, 프로세스 끼리 메모리 공유 X  프로세스간 통신 방법 command-line (단방향) 소켓 통신 standard input/output 프로세스의 output을 다른 프로세스의 input으로 전달한다. ex) ps -">
+  <meta name="description" content="2/4 thread, procss thread : 쓰레드끼리 메모리 공유, 동기화 process : 프로세스 위에 Thread가 동작하고, 프로세스 끼리 메모리 공유 X  프로세스간 통신 방법1.command-line (단방향) 2.소켓 통신 3.standard input/output  프로세스의 output을 다른 프로세스의 input으로 전달한다.ex)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2&#x2F;4 thread, procss">
 <meta property="og:url" content="http://yoursite.com/2016/02/04/2016-02-04-thread,procss,cache-post/index.html">
 <meta property="og:site_name" content="정리방">
-<meta property="og:description" content="2/4 thread, procss thread : 쓰레드끼리 메모리 공유, 동기화 process : 프로세스 위에 Thread가 동작하고, 프로세스 끼리 메모리 공유 X  프로세스간 통신 방법 command-line (단방향) 소켓 통신 standard input/output 프로세스의 output을 다른 프로세스의 input으로 전달한다. ex) ps -">
+<meta property="og:description" content="2/4 thread, procss thread : 쓰레드끼리 메모리 공유, 동기화 process : 프로세스 위에 Thread가 동작하고, 프로세스 끼리 메모리 공유 X  프로세스간 통신 방법1.command-line (단방향) 2.소켓 통신 3.standard input/output  프로세스의 output을 다른 프로세스의 input으로 전달한다.ex)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-02T15:49:53.515Z">
+<meta property="og:updated_time" content="2019-07-02T16:21:01.182Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2&#x2F;4 thread, procss">
-<meta name="twitter:description" content="2/4 thread, procss thread : 쓰레드끼리 메모리 공유, 동기화 process : 프로세스 위에 Thread가 동작하고, 프로세스 끼리 메모리 공유 X  프로세스간 통신 방법 command-line (단방향) 소켓 통신 standard input/output 프로세스의 output을 다른 프로세스의 input으로 전달한다. ex) ps -">
+<meta name="twitter:description" content="2/4 thread, procss thread : 쓰레드끼리 메모리 공유, 동기화 process : 프로세스 위에 Thread가 동작하고, 프로세스 끼리 메모리 공유 X  프로세스간 통신 방법1.command-line (단방향) 2.소켓 통신 3.standard input/output  프로세스의 output을 다른 프로세스의 input으로 전달한다.ex)">
   
     <link rel="alternative" href="/atom.xml" title="정리방" type="application/atom+xml">
   
@@ -156,26 +156,23 @@
 <li>thread : 쓰레드끼리 메모리 공유, 동기화</li>
 <li>process : 프로세스 위에 Thread가 동작하고, 프로세스 끼리 메모리 공유 X</li>
 </ul>
-<h2 id="프로세스간-통신-방법"><a href="#프로세스간-통신-방법" class="headerlink" title="프로세스간 통신 방법"></a>프로세스간 통신 방법</h2><ol>
-<li>command-line (단방향)</li>
-<li>소켓 통신</li>
-<li>standard input/output<ul>
-<li>프로세스의 output을 다른 프로세스의 input으로 전달한다.</li>
-<li>ex) ps -ef | grep java<br>왼쪽 명령어의 결과(output)을 오른쪽에 있는 명령어에 입력(input)으로 전달한다.<br>: 현재 실행 중인 프로세스 목록 중에, java인 것만 검색하여 출력한다.<ul>
+<h2 id="프로세스간-통신-방법"><a href="#프로세스간-통신-방법" class="headerlink" title="프로세스간 통신 방법"></a>프로세스간 통신 방법</h2><p>1.command-line (단방향)</p>
+<p>2.소켓 통신</p>
+<p>3.standard input/output</p>
+<ul>
+<li>프로세스의 output을 다른 프로세스의 input으로 전달한다.<br>ex) ps -ef | grep java<br>왼쪽 명령어의 결과(output)을 오른쪽에 있는 명령어에 입력(input)으로 전달한다.<br>: 현재 실행 중인 프로세스 목록 중에, java인 것만 검색하여 출력한다.</li>
+</ul>
+<ul>
 <li>ps : 현재 실행 중인 프로세스 목록 출력</li>
 </ul>
--e : 모든 프로세스를 출력해 준다.<br>-f : 풀 포맷으로 보여준다.(UID, PID 등)<ul>
+<p>-e : 모든 프로세스를 출력해 준다.<br>-f : 풀 포맷으로 보여준다.(UID, PID 등)</p>
+<ul>
 <li>명령어를 ‘|’으로 연결 한다.</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>공용 메모리</li>
-<li>message queue<ul>
+<p>4.공용 메모리<br>5.message queue</p>
+<ul>
 <li>메시지큐는 커널에서 전역적으로 관리되며(이를테면 커널 전역변수형태로), 모든 프로세스에서 접근가능하도록 되어있으므로, 하나의 메시지큐 서버가 커널에 요청해서 메시지큐를 작성하게 되면, 메시지큐의 접근자(식별자)를 아는 모든 프로세서는 동일한 메시지큐에 접근함으로써, 데이타를 공유할수 있게 된다.</li>
 </ul>
-</li>
-</ol>
 <h2 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h2><ul>
 <li>Rest 방식</li>
 <li>물리적으로 분리된 프로세스 접근</li>

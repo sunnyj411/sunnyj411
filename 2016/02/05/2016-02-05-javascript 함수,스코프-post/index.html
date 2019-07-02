@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>2/5 javascript 함수, 스코프 | 정리방</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2/4 javascript 함수, 스코프 함수 호출 순서가 바뀌어도 가능함 - 함수 선언이 암묵적으로 맨 위로 올라감 함수에 return 이 없으면 undefined 로 return 됨 문자로 선언된 것을 숫자로 처리할 때 형변환 함CSS -box model border : margin 과 padding의 경계 collapse : 간격을 없애서 한 선으로">
+  <meta name="description" content="2/4 javascript 함수, 스코프 함수 호출 순서가 바뀌어도 가능함 - 함수 선언이 암묵적으로 맨 위로 올라감 함수에 return 이 없으면 undefined 로 return 됨 문자로 선언된 것을 숫자로 처리할 때 형변환 함  CSS -box model border : margin 과 padding의 경계 collapse : 간격을 없애서 한 선으">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2&#x2F;5 javascript 함수, 스코프">
 <meta property="og:url" content="http://yoursite.com/2016/02/05/2016-02-05-javascript 함수,스코프-post/index.html">
 <meta property="og:site_name" content="정리방">
-<meta property="og:description" content="2/4 javascript 함수, 스코프 함수 호출 순서가 바뀌어도 가능함 - 함수 선언이 암묵적으로 맨 위로 올라감 함수에 return 이 없으면 undefined 로 return 됨 문자로 선언된 것을 숫자로 처리할 때 형변환 함CSS -box model border : margin 과 padding의 경계 collapse : 간격을 없애서 한 선으로">
+<meta property="og:description" content="2/4 javascript 함수, 스코프 함수 호출 순서가 바뀌어도 가능함 - 함수 선언이 암묵적으로 맨 위로 올라감 함수에 return 이 없으면 undefined 로 return 됨 문자로 선언된 것을 숫자로 처리할 때 형변환 함  CSS -box model border : margin 과 padding의 경계 collapse : 간격을 없애서 한 선으">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-26T15:22:04.778Z">
+<meta property="og:updated_time" content="2019-07-02T16:07:51.239Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2&#x2F;5 javascript 함수, 스코프">
-<meta name="twitter:description" content="2/4 javascript 함수, 스코프 함수 호출 순서가 바뀌어도 가능함 - 함수 선언이 암묵적으로 맨 위로 올라감 함수에 return 이 없으면 undefined 로 return 됨 문자로 선언된 것을 숫자로 처리할 때 형변환 함CSS -box model border : margin 과 padding의 경계 collapse : 간격을 없애서 한 선으로">
+<meta name="twitter:description" content="2/4 javascript 함수, 스코프 함수 호출 순서가 바뀌어도 가능함 - 함수 선언이 암묵적으로 맨 위로 올라감 함수에 return 이 없으면 undefined 로 return 됨 문자로 선언된 것을 숫자로 처리할 때 형변환 함  CSS -box model border : margin 과 padding의 경계 collapse : 간격을 없애서 한 선으">
   
     <link rel="alternative" href="/atom.xml" title="정리방" type="application/atom+xml">
   
@@ -155,16 +155,18 @@
         <h1 id="2-4-javascript-함수-스코프"><a href="#2-4-javascript-함수-스코프" class="headerlink" title="2/4 javascript 함수, 스코프"></a>2/4 javascript 함수, 스코프</h1><ul>
 <li>함수 호출 순서가 바뀌어도 가능함 - 함수 선언이 암묵적으로 맨 위로 올라감</li>
 <li>함수에 return 이 없으면 undefined 로 return 됨</li>
-<li>문자로 선언된 것을 숫자로 처리할 때 형변환 함<h2 id="CSS-box-model"><a href="#CSS-box-model" class="headerlink" title="CSS -box model"></a>CSS -box model</h2></li>
+<li>문자로 선언된 것을 숫자로 처리할 때 형변환 함</li>
+</ul>
+<h2 id="CSS-box-model"><a href="#CSS-box-model" class="headerlink" title="CSS -box model"></a>CSS -box model</h2><ul>
 <li>border : margin 과 padding의 경계</li>
 <li>collapse : 간격을 없애서 한 선으로 보임</li>
 <li>마진 겹침 : 마진값이 더 큰 쪽을 따르게 됨<ul>
-<li>border 나 padding 값을 주면 해결<ul>
-<li>outline : 내부이동 X, bordder : 내부이동 O <h2 id="javascript-성능"><a href="#javascript-성능" class="headerlink" title="javascript 성능"></a>javascript 성능</h2></li>
+<li>border 나 padding 값을 주면 해결</li>
 </ul>
 </li>
+<li>outline : 내부이동 X, bordder : 내부이동 O </li>
 </ul>
-</li>
+<h2 id="javascript-성능"><a href="#javascript-성능" class="headerlink" title="javascript 성능"></a>javascript 성능</h2><ul>
 <li>Dom 생성보다는 InnerHTML 사용이 reflow를 최소화 함</li>
 <li>table 은 되도록 사용하지 않음<ul>
 <li>점진적 렌더링이 안됨</li>
