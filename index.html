@@ -130,94 +130,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-2019-07-02-DB" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/01/2019-07-02-DB/">DB</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/01/2019-07-02-DB/" class="archive-article-date">
-  	<time datetime="2019-07-01T13:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="7-2-RDB-NoSQL"><a href="#7-2-RDB-NoSQL" class="headerlink" title="7/2 RDB, NoSQL"></a>7/2 RDB, NoSQL</h1><h2 id="RDB"><a href="#RDB" class="headerlink" title="RDB"></a>RDB</h2><ul>
-<li>RDB는 관계형 데이터베이스며, 대표적으로 Mysql, Oracle 등이 있다</li>
-</ul>
-<p>특징</p>
-<ul>
-<li>테이블(Table) 마다 스키마(Schema)를 정의해야 됩니다.</li>
-<li>데이터 타입과 제약(Constraint)를 통해서 데이터의 정확성을 보장합니다.</li>
-<li>SQL 질의문을 통해 요청을 처리합니다.</li>
-<li>성능을 높이려며 하드웨어(H/W)를 고성능으로 교체해야 된다. (Scale Up)</li>
-<li>고성능 하드웨어는 가격이 비싸기 때문에, RDB의 성능을 높이거나 확장하기 어렵기 때문에 확장성에 좋지 않습니다.</li>
-</ul>
-<h2 id="NoSQL"><a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL</h2><ul>
-<li>RDB의 확장성 이슈를 해결하기 위해 나온 DB 모델이고, Redis(Key-value), MongoDB(document-oriented) 등이 있다</li>
-<li>가장 많이쓰이는 NoSQL은 Key-value 형식으로 데이터를 관리한다</li>
-<li>SQL을 사용하지 않는다</li>
-</ul>
-<h2 id="In-Memory-저장소"><a href="#In-Memory-저장소" class="headerlink" title="In-Memory 저장소"></a>In-Memory 저장소</h2><ul>
-<li>redis는 In-Memory 저장소로, NoSQL 방식에 속하는 데이터베이스이며, key-value방식을 사용한다. </li>
-</ul>
-<h2 id="In-memory-특징"><a href="#In-memory-특징" class="headerlink" title="In-memory 특징"></a>In-memory 특징</h2><ul>
-<li>Memory의 가격이 용량대비 충분히 낮아지면서 빠른 DB 성능을 위해 생겼다</li>
-<li>데이터가 Disk + memory에 저장된다. I/O 성능을 높인다 (SSD처럼)</li>
-<li>프로세스가 내려가거나 장비가 shutdown 되더라도 Data의 복구가 가능하다.</li>
-<li>저장소 메모리를 재사용하지 않는다 </li>
-<li>Redis, LMDB 등이 있다</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/01/2019-07-02-DB/">GO >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-2019-07-01-AOP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -240,14 +152,13 @@
       
         <h1 id="7-1-AOP"><a href="#7-1-AOP" class="headerlink" title="7/1 AOP"></a>7/1 AOP</h1><h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2><ul>
 <li>“Aspect-Oriented Programming”의 약자</li>
-<li>프로그램에 처리해야 하는 다양한 관점을 분리시킨 다음 각각의 관점 별로 구현을 한 후<br>이들을 조합하여 완성된 프로그램을 만들고자하는 개념</li>
 <li>기능을 핵심 비지니스 로직과 공통 모듈로 구분하고, 핵심 로직에 영향을 미치지 않고 사이사이에 공통 모듈을 효과적으로 잘 끼워넣도록 하는 개발 방법</li>
 <li>애플리케이션 객체는 원래 해야 할 일인 비즈니스 로직을 수행하는 것 외에는<br>아무것도 하지않음</li>
-<li>로깅이나 트랜잭션 지원과 같은 요소를 만든 후에 코드 밖에서 비즈니스 로직 사이에 필요할 때 삽입하여 코드 밖에서 설정된다는 것이 핵심(DB 커넥션을 하려면 원래라면 연결하는 구문 하나하나 작성해야하지만 )</li>
-</ul>
-<ul>
+<li>로깅이나 트랜잭션 지원과 같은 요소를 만든 후에 코드 밖에서 비즈니스 로직 사이에 필요할 때 삽입하여 코드 밖에서 설정된다는 것이 핵심<ul>
 <li>spring framework aop : 자바의 proxy 클래스를 이용하여 구현되어있음</li>
 <li>proxy 클래스 : invocationHandler와 함께 사용되는 클래스임</li>
+</ul>
+</li>
 </ul>
 <h2 id="Proxy-객체"><a href="#Proxy-객체" class="headerlink" title="Proxy 객체"></a>Proxy 객체</h2><ul>
 <li>실제 개발자가 정의한 클래스를 상속받은 또 다른 클래스에 의해 생성된 객체</li>
@@ -385,6 +296,94 @@
 
 
   
+    <article id="post-2019-07-02-DB" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/01/2019-07-02-DB/">DB</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/01/2019-07-02-DB/" class="archive-article-date">
+  	<time datetime="2019-07-01T13:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="7-2-RDB-NoSQL"><a href="#7-2-RDB-NoSQL" class="headerlink" title="7/2 RDB, NoSQL"></a>7/2 RDB, NoSQL</h1><h2 id="RDB"><a href="#RDB" class="headerlink" title="RDB"></a>RDB</h2><ul>
+<li>RDB는 관계형 데이터베이스며, 대표적으로 Mysql, Oracle 등이 있다</li>
+</ul>
+<p>특징</p>
+<ul>
+<li>테이블(Table) 마다 스키마(Schema)를 정의해야 됩니다.</li>
+<li>데이터 타입과 제약(Constraint)를 통해서 데이터의 정확성을 보장합니다.</li>
+<li>SQL 질의문을 통해 요청을 처리합니다.</li>
+<li>성능을 높이려며 하드웨어(H/W)를 고성능으로 교체해야 된다. (Scale Up)</li>
+<li>고성능 하드웨어는 가격이 비싸기 때문에, RDB의 성능을 높이거나 확장하기 어렵기 때문에 확장성에 좋지 않습니다.</li>
+</ul>
+<h2 id="NoSQL"><a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL</h2><ul>
+<li>RDB의 확장성 이슈를 해결하기 위해 나온 DB 모델이고, Redis(Key-value), MongoDB(document-oriented) 등이 있다</li>
+<li>가장 많이쓰이는 NoSQL은 Key-value 형식으로 데이터를 관리한다</li>
+<li>SQL을 사용하지 않는다</li>
+</ul>
+<h2 id="In-Memory-저장소"><a href="#In-Memory-저장소" class="headerlink" title="In-Memory 저장소"></a>In-Memory 저장소</h2><ul>
+<li>redis는 In-Memory 저장소로, NoSQL 방식에 속하는 데이터베이스이며, key-value방식을 사용한다. </li>
+</ul>
+<h2 id="In-memory-특징"><a href="#In-memory-특징" class="headerlink" title="In-memory 특징"></a>In-memory 특징</h2><ul>
+<li>Memory의 가격이 용량대비 충분히 낮아지면서 빠른 DB 성능을 위해 생겼다</li>
+<li>데이터가 Disk + memory에 저장된다. I/O 성능을 높인다 (SSD처럼)</li>
+<li>프로세스가 내려가거나 장비가 shutdown 되더라도 Data의 복구가 가능하다.</li>
+<li>저장소 메모리를 재사용하지 않는다 </li>
+<li>Redis, LMDB 등이 있다</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/01/2019-07-02-DB/">GO >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2019-06-30-Spring 지식 리마인드" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -406,7 +405,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="6-30-Spring-지식-리마인드"><a href="#6-30-Spring-지식-리마인드" class="headerlink" title="6/30 Spring 지식 리마인드"></a>6/30 Spring 지식 리마인드</h1><h2 id="Spring-Framework"><a href="#Spring-Framework" class="headerlink" title="Spring Framework"></a>Spring Framework</h2><ul>
-<li>스프링은 POJO(Plain Old Java Object) 방식의 프레임워크이다. </li>
+<li>스프링은 POJO(Plain Old Java Object) 방식의 프레임워크이다. <ul>
+<li>POJO : 순수 java object성 bean. 상속이나 어노테이션을 필요로 하지않는 객체. 순수하게 setter, getter 메소드로 이루어진 Value Object성의 Bean.</li>
+</ul>
+</li>
 <li>스프링은 제어 반전(IoC : Inversion of Control)을 지원한다. 컨트롤의 제어권이 사용자가 아니라 프레임워크에 있어서 필요에 따라 스프링에서 사용자의 코드를 호출한다. 요청 시점으로부터 객체가 생성되고 수행된다.<ul>
 <li>제어 반전 컨테이너<br>제어 반전(IoC: Inversion of Control) 컨테이너는 스프링의 가장 중요하고 핵심적인 기능으로서 자바의 reflection을 이용해서 객체의 생명주기를 관리하고 의존성 주입(Dependency Injection)을 통해 각 계층이나 서비스들간의 의존성을 맞춰준다. 이러한 기능들은 주로 환경설정을 담당하는 XML 파일에 의해 설정되고 수행된다.</li>
 </ul>
@@ -626,7 +628,7 @@
 <li>보통 실시간 데이터의 업데이트 주기는 예측하기 어려우므로, 그에 따른 불필요한 서버 요청이 다수 생김</li>
 </ul>
 <h2 id="Long-Polling"><a href="#Long-Polling" class="headerlink" title="Long Polling"></a>Long Polling</h2><ul>
-<li>HTTP 요청 시 서버는 해당 요청을 일정 시간 동안 대기 시키고, 대기 시간 안에 데이터가 업데이트되었다면, 클라이언트에게 응답을 보내고 전달받은 데이터를 처리 후 서버로 재요청을 시작함</li>
+<li>HTTP 요청 시 서버는 해당 요청을 일정 시간 동안 대기 시키고, 대기 시간 안에 데이터가 업데이트되었다면, 클라이언트에게 응답을 보내고 클라이언트는 전달받은 데이터를 처리 후 서버로 재요청을 시작함. 혹시나 지정 대기 시간이 끝나면 클라이언트는 서버에 있는 정보를 다시 요청한다. </li>
 </ul>
 <h2 id="Web-Socket"><a href="#Web-Socket" class="headerlink" title="Web Socket"></a>Web Socket</h2><ul>
 <li>HTTP 프로토콜의 단방향 통신이 아닌 양방 통신.</li>

@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>AOP | 정리방</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="7/1 AOPAOP “Aspect-Oriented Programming”의 약자 프로그램에 처리해야 하는 다양한 관점을 분리시킨 다음 각각의 관점 별로 구현을 한 후이들을 조합하여 완성된 프로그램을 만들고자하는 개념 기능을 핵심 비지니스 로직과 공통 모듈로 구분하고, 핵심 로직에 영향을 미치지 않고 사이사이에 공통 모듈을 효과적으로 잘 끼워넣도록 하는 개발">
+  <meta name="description" content="7/1 AOPAOP “Aspect-Oriented Programming”의 약자 기능을 핵심 비지니스 로직과 공통 모듈로 구분하고, 핵심 로직에 영향을 미치지 않고 사이사이에 공통 모듈을 효과적으로 잘 끼워넣도록 하는 개발 방법 애플리케이션 객체는 원래 해야 할 일인 비즈니스 로직을 수행하는 것 외에는아무것도 하지않음 로깅이나 트랜잭션 지원과 같은 요소를">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AOP">
 <meta property="og:url" content="http://yoursite.com/2019/07/01/2019-07-01-AOP/index.html">
 <meta property="og:site_name" content="정리방">
-<meta property="og:description" content="7/1 AOPAOP “Aspect-Oriented Programming”의 약자 프로그램에 처리해야 하는 다양한 관점을 분리시킨 다음 각각의 관점 별로 구현을 한 후이들을 조합하여 완성된 프로그램을 만들고자하는 개념 기능을 핵심 비지니스 로직과 공통 모듈로 구분하고, 핵심 로직에 영향을 미치지 않고 사이사이에 공통 모듈을 효과적으로 잘 끼워넣도록 하는 개발">
+<meta property="og:description" content="7/1 AOPAOP “Aspect-Oriented Programming”의 약자 기능을 핵심 비지니스 로직과 공통 모듈로 구분하고, 핵심 로직에 영향을 미치지 않고 사이사이에 공통 모듈을 효과적으로 잘 끼워넣도록 하는 개발 방법 애플리케이션 객체는 원래 해야 할 일인 비즈니스 로직을 수행하는 것 외에는아무것도 하지않음 로깅이나 트랜잭션 지원과 같은 요소를">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-01T15:22:00.570Z">
+<meta property="og:updated_time" content="2019-07-02T15:50:30.844Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AOP">
-<meta name="twitter:description" content="7/1 AOPAOP “Aspect-Oriented Programming”의 약자 프로그램에 처리해야 하는 다양한 관점을 분리시킨 다음 각각의 관점 별로 구현을 한 후이들을 조합하여 완성된 프로그램을 만들고자하는 개념 기능을 핵심 비지니스 로직과 공통 모듈로 구분하고, 핵심 로직에 영향을 미치지 않고 사이사이에 공통 모듈을 효과적으로 잘 끼워넣도록 하는 개발">
+<meta name="twitter:description" content="7/1 AOPAOP “Aspect-Oriented Programming”의 약자 기능을 핵심 비지니스 로직과 공통 모듈로 구분하고, 핵심 로직에 영향을 미치지 않고 사이사이에 공통 모듈을 효과적으로 잘 끼워넣도록 하는 개발 방법 애플리케이션 객체는 원래 해야 할 일인 비즈니스 로직을 수행하는 것 외에는아무것도 하지않음 로깅이나 트랜잭션 지원과 같은 요소를">
   
     <link rel="alternative" href="/atom.xml" title="정리방" type="application/atom+xml">
   
@@ -154,14 +154,13 @@
       
         <h1 id="7-1-AOP"><a href="#7-1-AOP" class="headerlink" title="7/1 AOP"></a>7/1 AOP</h1><h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2><ul>
 <li>“Aspect-Oriented Programming”의 약자</li>
-<li>프로그램에 처리해야 하는 다양한 관점을 분리시킨 다음 각각의 관점 별로 구현을 한 후<br>이들을 조합하여 완성된 프로그램을 만들고자하는 개념</li>
 <li>기능을 핵심 비지니스 로직과 공통 모듈로 구분하고, 핵심 로직에 영향을 미치지 않고 사이사이에 공통 모듈을 효과적으로 잘 끼워넣도록 하는 개발 방법</li>
 <li>애플리케이션 객체는 원래 해야 할 일인 비즈니스 로직을 수행하는 것 외에는<br>아무것도 하지않음</li>
-<li>로깅이나 트랜잭션 지원과 같은 요소를 만든 후에 코드 밖에서 비즈니스 로직 사이에 필요할 때 삽입하여 코드 밖에서 설정된다는 것이 핵심(DB 커넥션을 하려면 원래라면 연결하는 구문 하나하나 작성해야하지만 )</li>
-</ul>
-<ul>
+<li>로깅이나 트랜잭션 지원과 같은 요소를 만든 후에 코드 밖에서 비즈니스 로직 사이에 필요할 때 삽입하여 코드 밖에서 설정된다는 것이 핵심<ul>
 <li>spring framework aop : 자바의 proxy 클래스를 이용하여 구현되어있음</li>
 <li>proxy 클래스 : invocationHandler와 함께 사용되는 클래스임</li>
+</ul>
+</li>
 </ul>
 <h2 id="Proxy-객체"><a href="#Proxy-객체" class="headerlink" title="Proxy 객체"></a>Proxy 객체</h2><ul>
 <li>실제 개발자가 정의한 클래스를 상속받은 또 다른 클래스에 의해 생성된 객체</li>
@@ -255,15 +254,6 @@
 
   
 <nav id="article-nav">
-  
-    <a href="/2019/07/01/2019-07-02-DB/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          DB
-        
-      </div>
-    </a>
   
   
     <a href="/2019/07/01/2019-07-01-RESTful/" id="article-nav-older" class="article-nav-link-wrap">
