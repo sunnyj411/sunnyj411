@@ -130,6 +130,106 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2017-11-21-cache-post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/21/2017-11-21-cache-post/">cache</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/21/2017-11-21-cache-post/" class="archive-article-date">
+  	<time datetime="2017-11-21T14:14:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Cache"><a href="#Cache" class="headerlink" title="Cache"></a>Cache</h2><ul>
+<li>CPU와 RAM 사이의 버퍼 역할을 하는 매우 빠른 메모리 타입</li>
+</ul>
+<h2 id="서버-캐싱"><a href="#서버-캐싱" class="headerlink" title="서버 캐싱"></a>서버 캐싱</h2><ul>
+<li>캐시 서버 : 캐싱만을 전용으로 하는 서버를 둠</li>
+<li>프록시 서버 : server와 client 사이에서 중계기로서 대리로 통신을 수행하는 서버</li>
+</ul>
+<h2 id="브라우저-캐싱"><a href="#브라우저-캐싱" class="headerlink" title="브라우저 캐싱"></a>브라우저 캐싱</h2><ul>
+<li>웹 브라우저가 자신이 소속되어있는 로컬 하드디스크에 캐시 저장</li>
+</ul>
+<h2 id="Cache-Control"><a href="#Cache-Control" class="headerlink" title="Cache-Control :"></a>Cache-Control :</h2><p>cache-request-directive=<br>“no-cache” 캐시 하지 않는다.<br>“no-store” 신속히 넘긴 후에 정보를 제거한다.<br>“max-age = seconds” seconds에 지정한 것보다 오래된 entry는 캐시하지 않는다.<br>“max-stale [=seconds]” 만료된 데이터를 보낸다. 만약 seconds가 지정되어 있다면 지정한 숫자보다 적은 만료된 데이터를 보낸다.<br>“min-fresh [=seconds]” 명시된 seconds의 수 이후의 변경된 새 데이터만 보낸다.<br>“only-if-cached” 새로운 데이터를 검색하지 않고 캐시에 있는 데이터만 반환한다.<br>“Expires” : 리소스가 지정된 일시까지 캐시로써 유효하다.</p>
+<h2 id="Cache-Control-1"><a href="#Cache-Control-1" class="headerlink" title="Cache-Control :"></a>Cache-Control :</h2><p>cache-response-directive=<br>“public” 어떠한 캐쉬라도 캐싱할 수 있다.<br>“private” 공유된 캐쉬는 캐시하지 않는다.<br>“no-cache” 캐쉬하지 않는다.<br>“no-transform” 데이터를 변환하지 않는다.<br>“must-revalidate” 클라이언트는 데이터를 재확인 해야 한다.<br>“proxy-revalidate” 개인적인 클라이언트 캐시를 제외하고 데이터를 재확인 해야한다.<br>“max-age”=”delta-seconds” 문서는 지정된 seconds만큼 변화가 없는 상태라고 생각한다.</p>
+<h2 id="추가"><a href="#추가" class="headerlink" title="추가"></a>추가</h2><ul>
+<li>언제 갱신할지가 중요함</li>
+<li>시간을 정해서 갱신</li>
+<li>캐시 메모리가 너무 많으면 탐색 비용이 많이 들어서 느려짐</li>
+<li>LRU - 많이쓰는 것 순으로 정렬해서 더 빠르게 함 </li>
+</ul>
+<ul>
+<li><p>프록시</p>
+<h2 id="프록시"><a href="#프록시" class="headerlink" title="프록시"></a>프록시</h2><ul>
+<li>server와 client 사이에서 중계기로서 대리로 통신을 수행하는 기능</li>
+<li>그 중계 기능을 하는 것을 Proxy Server</li>
+</ul>
+</li>
+</ul>
+<h2 id="Proxy-server를-구축하는-이유"><a href="#Proxy-server를-구축하는-이유" class="headerlink" title="Proxy server를 구축하는 이유"></a>Proxy server를 구축하는 이유</h2><ul>
+<li>보안: 익명의 사용자가 서버에 직접 접근하는 것을 막음, 보안을 위해 익명으로 컴퓨터를 유지 </li>
+<li>속도: 웹 프록시는 웹 서버로부터 웹 페이지를 캐시로 저장하는 데 흔히 쓰임, 이는 속도를 높임</li>
+<li>ACL: access control list, 사이트 접근에 대한 접근 정책 정의 가능 </li>
+<li>Log/Audit: 회사내 직원의 인터넷/인트라넷 사용 레포팅 가능</li>
+<li>지역 네트워크의 제한을 우회하기 위해 </li>
+</ul>
+<h2 id="Proxy-종류"><a href="#Proxy-종류" class="headerlink" title="Proxy 종류"></a>Proxy 종류</h2><ul>
+<li>Forward Proxy</li>
+<li>Reverse Proxy : 리버스 프록시 서버와 관련된 URI만 웹 브라우저 사용자에게 공개됨. 사용자는 이 URI을 사용하여 리버스 프록시 서버에 액세스하고, 리버스 프록시 서버는 사용자의 요청을 처리할 적절한 내부 서버로 경로를 재지정함. 리버스 프록시 서버를 이용하면 로드 밸런싱을 통해 서버의 부하를 분산시킬 수 있음. 각 서버의 부하를 덜어준만큼 웹 서버의 속도가 증대됨. 보안성이 있음. 중앙 집중식 log 작성과 감시를 할 수 있음.</li>
+<li>Open Proxy</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/21/2017-11-21-cache-post/">GO >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2017-11-20-etc" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -228,72 +328,6 @@
 
 
   
-    <article id="post-2017-10-31-Spring security" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/31/2017-10-31-Spring security/">Spring Security</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/31/2017-10-31-Spring security/" class="archive-article-date">
-  	<time datetime="2017-10-31T07:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Spring-Security"><a href="#Spring-Security" class="headerlink" title="Spring Security"></a>Spring Security</h2><ul>
-<li>X-frame option : iframe에 접근 보안 설정, 디폴트는 ‘DENY’</li>
-<li>‘SAME ORIGIN’ : parent URL과 접근하는 iframe parent URL 과 같으면 허용</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/31/2017-10-31-Spring security/">GO >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-2017-11-15-Promise" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -335,6 +369,72 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/10/31/2017-11-15-Promise/">GO >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2017-10-31-Spring security" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/31/2017-10-31-Spring security/">Spring Security</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/31/2017-10-31-Spring security/" class="archive-article-date">
+  	<time datetime="2017-10-31T07:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Spring-Security"><a href="#Spring-Security" class="headerlink" title="Spring Security"></a>Spring Security</h2><ul>
+<li>X-frame option : iframe에 접근 보안 설정, 디폴트는 ‘DENY’</li>
+<li>‘SAME ORIGIN’ : parent URL과 접근하는 iframe parent URL 과 같으면 허용</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/31/2017-10-31-Spring security/">GO >></a>
         </p>
       
 
@@ -816,92 +916,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/03/07/2016-03-07-저장소 인증-post/">GO >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2016-02-11-HTML header-post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/11/2016-02-11-HTML header-post/">2/11 HTML header</a>
-    </h1>
-  
-
-        
-        <a href="/2016/02/11/2016-02-11-HTML header-post/" class="archive-article-date">
-  	<time datetime="2016-02-11T14:57:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="2-11-HTML-header"><a href="#2-11-HTML-header" class="headerlink" title="2/11 HTML header"></a>2/11 HTML header</h1><h2 id="Setcookie"><a href="#Setcookie" class="headerlink" title="Setcookie"></a>Setcookie</h2><ul>
-<li>서버에서 쿠키를 생성하면 헤더를 통해 SetCookie라는 정보를 클라이언트에 전송</li>
-<li>클라이언트 reponse 에 쿠키가 있으면 browser 에 쿠키 정보를 설정함</li>
-<li>클라이언트에서 갖고있는 쿠키는 browser가 매번 서버에 헤더에 넣어서 보냄</li>
-<li>쿠키 인증</li>
-</ul>
-<ul>
-<li>쿠키를 그대로 사용하면 쿠키 값만 노출되면 사용가능 해지기 떄문에 쿠키 값을 암호화하여 사용함  </li>
-<li>암호화 된 쿠키가 유효한 쿠키인지 항상 확인 해야함</li>
-<li>암호화 된 쿠키를 사용하는 이유는 보안과 관리 용이하여 사용</li>
-<li>hash 암호면 디코딩할 수 없기 때문에 암호화 방식을 바꿀 수 없음</li>
-</ul>
-<h2 id="expires"><a href="#expires" class="headerlink" title="expires"></a>expires</h2><ul>
-<li>data 의 형식으로 문서가 변경될수도 있을 때 시간 또는 그 정보가 유효하지 않을 때의 시간을 명시</li>
-<li>설정된 시간 이후, 문서는 변경 또는 삭제가 되지 않을 수 있음 </li>
-</ul>
-<h2 id="strict-transport-security"><a href="#strict-transport-security" class="headerlink" title="strict-transport-security"></a>strict-transport-security</h2><ul>
-<li>HTTP 보안 연결에 사용하는 것</li>
-<li>해당 헤더를 사용하면 http:// 를 사용해도 항상 https:// 로 접속 함</li>
-<li>SSL Strippping 공격 차단</li>
-</ul>
-<h2 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h2><ul>
-<li>stateless : security 가 session에 관여하지 않도록</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/02/11/2016-02-11-HTML header-post/">GO >></a>
         </p>
       
 
