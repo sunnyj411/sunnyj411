@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>2/4 thread, procss | 정리방</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2/4 thread, procss thread : 쓰레드끼리 메모리 공유, 동기화 process : 프로세스 위에 Thread가 동작하고, 프로세스 끼리 메모리 공유 X  프로세스간 통신 방법1.command-line (단방향) 2.소켓 통신 3.standard input/output  프로세스의 output을 다른 프로세스의 input으로 전달한다.ex)">
+  <meta name="description" content="2/4 thread, procss thread : 쓰레드끼리 메모리 공유, 동기화 작업이 필요함. 코드, 데이터, 힙 영역을 공유함 process : 프로세스 위에 Thread가 동작하고, 프로세스 끼리 메모리 공유 X(코드, 데이터, 스택, 힙 영역으로 구성)  프로세스간 통신 방법1.command-line (단방향) 2.소켓 통신 3.standard i">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2&#x2F;4 thread, procss">
 <meta property="og:url" content="http://yoursite.com/2016/02/04/2016-02-04-thread,procss,cache-post/index.html">
 <meta property="og:site_name" content="정리방">
-<meta property="og:description" content="2/4 thread, procss thread : 쓰레드끼리 메모리 공유, 동기화 process : 프로세스 위에 Thread가 동작하고, 프로세스 끼리 메모리 공유 X  프로세스간 통신 방법1.command-line (단방향) 2.소켓 통신 3.standard input/output  프로세스의 output을 다른 프로세스의 input으로 전달한다.ex)">
+<meta property="og:description" content="2/4 thread, procss thread : 쓰레드끼리 메모리 공유, 동기화 작업이 필요함. 코드, 데이터, 힙 영역을 공유함 process : 프로세스 위에 Thread가 동작하고, 프로세스 끼리 메모리 공유 X(코드, 데이터, 스택, 힙 영역으로 구성)  프로세스간 통신 방법1.command-line (단방향) 2.소켓 통신 3.standard i">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-02T16:21:01.182Z">
+<meta property="og:updated_time" content="2019-07-14T15:04:59.710Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2&#x2F;4 thread, procss">
-<meta name="twitter:description" content="2/4 thread, procss thread : 쓰레드끼리 메모리 공유, 동기화 process : 프로세스 위에 Thread가 동작하고, 프로세스 끼리 메모리 공유 X  프로세스간 통신 방법1.command-line (단방향) 2.소켓 통신 3.standard input/output  프로세스의 output을 다른 프로세스의 input으로 전달한다.ex)">
+<meta name="twitter:description" content="2/4 thread, procss thread : 쓰레드끼리 메모리 공유, 동기화 작업이 필요함. 코드, 데이터, 힙 영역을 공유함 process : 프로세스 위에 Thread가 동작하고, 프로세스 끼리 메모리 공유 X(코드, 데이터, 스택, 힙 영역으로 구성)  프로세스간 통신 방법1.command-line (단방향) 2.소켓 통신 3.standard i">
   
     <link rel="alternative" href="/atom.xml" title="정리방" type="application/atom+xml">
   
@@ -153,8 +153,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="2-4-thread-procss"><a href="#2-4-thread-procss" class="headerlink" title="2/4 thread, procss"></a>2/4 thread, procss</h1><ul>
-<li>thread : 쓰레드끼리 메모리 공유, 동기화</li>
-<li>process : 프로세스 위에 Thread가 동작하고, 프로세스 끼리 메모리 공유 X</li>
+<li>thread : 쓰레드끼리 메모리 공유, 동기화 작업이 필요함. 코드, 데이터, 힙 영역을 공유함</li>
+<li>process : 프로세스 위에 Thread가 동작하고, 프로세스 끼리 메모리 공유 X<br>(코드, 데이터, 스택, 힙 영역으로 구성)</li>
 </ul>
 <h2 id="프로세스간-통신-방법"><a href="#프로세스간-통신-방법" class="headerlink" title="프로세스간 통신 방법"></a>프로세스간 통신 방법</h2><p>1.command-line (단방향)</p>
 <p>2.소켓 통신</p>
