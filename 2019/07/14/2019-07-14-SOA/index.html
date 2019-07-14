@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>SOA | 정리방</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="7/14 SOASOA 서비스 지향 아키텍처 새로운 기능을 구현할 때 새롭게 시스템을 신규 개발하는 것이 아니라 이미 제공되어 있는기존의 서비스들을 조립하여 하나의 애플리케이션을 구현하는 소프트웨어 아키텍처 비즈니스 로직 재사용을 통한 구현  ##MSA  마이크로서비스아키텍처 큰 애플리케이션을 서비스 단위로 작게 나누고, 서비스들끼리 서로 통신하는 형태의 아">
+  <meta name="description" content="7/14 SOASOA 서비스 지향 아키텍처 새로운 기능을 구현할 때 새롭게 시스템을 신규 개발하는 것이 아니라 이미 제공되어 있는기존의 서비스들을 조립하여 하나의 애플리케이션을 구현하는 소프트웨어 아키텍처 비즈니스 로직 재사용을 통한 구현  MSA 마이크로서비스아키텍처  큰 애플리케이션을 서비스 단위로 작게 나누고, 서비스들끼리 서로 통신하는 형태의 아키텍">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SOA">
 <meta property="og:url" content="http://yoursite.com/2019/07/14/2019-07-14-SOA/index.html">
 <meta property="og:site_name" content="정리방">
-<meta property="og:description" content="7/14 SOASOA 서비스 지향 아키텍처 새로운 기능을 구현할 때 새롭게 시스템을 신규 개발하는 것이 아니라 이미 제공되어 있는기존의 서비스들을 조립하여 하나의 애플리케이션을 구현하는 소프트웨어 아키텍처 비즈니스 로직 재사용을 통한 구현  ##MSA  마이크로서비스아키텍처 큰 애플리케이션을 서비스 단위로 작게 나누고, 서비스들끼리 서로 통신하는 형태의 아">
+<meta property="og:description" content="7/14 SOASOA 서비스 지향 아키텍처 새로운 기능을 구현할 때 새롭게 시스템을 신규 개발하는 것이 아니라 이미 제공되어 있는기존의 서비스들을 조립하여 하나의 애플리케이션을 구현하는 소프트웨어 아키텍처 비즈니스 로직 재사용을 통한 구현  MSA 마이크로서비스아키텍처  큰 애플리케이션을 서비스 단위로 작게 나누고, 서비스들끼리 서로 통신하는 형태의 아키텍">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-14T13:46:19.387Z">
+<meta property="og:updated_time" content="2019-07-14T13:48:20.245Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SOA">
-<meta name="twitter:description" content="7/14 SOASOA 서비스 지향 아키텍처 새로운 기능을 구현할 때 새롭게 시스템을 신규 개발하는 것이 아니라 이미 제공되어 있는기존의 서비스들을 조립하여 하나의 애플리케이션을 구현하는 소프트웨어 아키텍처 비즈니스 로직 재사용을 통한 구현  ##MSA  마이크로서비스아키텍처 큰 애플리케이션을 서비스 단위로 작게 나누고, 서비스들끼리 서로 통신하는 형태의 아">
+<meta name="twitter:description" content="7/14 SOASOA 서비스 지향 아키텍처 새로운 기능을 구현할 때 새롭게 시스템을 신규 개발하는 것이 아니라 이미 제공되어 있는기존의 서비스들을 조립하여 하나의 애플리케이션을 구현하는 소프트웨어 아키텍처 비즈니스 로직 재사용을 통한 구현  MSA 마이크로서비스아키텍처  큰 애플리케이션을 서비스 단위로 작게 나누고, 서비스들끼리 서로 통신하는 형태의 아키텍">
   
     <link rel="alternative" href="/atom.xml" title="정리방" type="application/atom+xml">
   
@@ -157,16 +157,16 @@
 <li>새로운 기능을 구현할 때 새롭게 시스템을 신규 개발하는 것이 아니라 이미 제공되어 있는<br>기존의 서비스들을 조립하여 하나의 애플리케이션을 구현하는 소프트웨어 아키텍처</li>
 <li>비즈니스 로직 재사용을 통한 구현</li>
 </ul>
-<p>##MSA</p>
+<h2 id="MSA"><a href="#MSA" class="headerlink" title="MSA"></a>MSA</h2><ul>
+<li><p>마이크로서비스아키텍처</p>
+</li>
+<li><p>큰 애플리케이션을 서비스 단위로 작게 나누고, 서비스들끼리 서로 통신하는 형태의 아키텍처 패턴</p>
 <ul>
-<li>마이크로서비스아키텍처</li>
-<li>큰 애플리케이션을 서비스 단위로 작게 나누고, 서비스들끼리 서로 통신하는 형태의 아키텍처 패턴</li>
-<li><ul>
 <li>각각의 서비스들은 API 형태로 주로 제공됩니다. 각각의 서비스는 하나의 작은 애플리케이션처럼 배포가 가능합니다. 따라서 부분적으로 새로운 기능을 추가하거나, 새로운 기술을 적용할 수도 있습니다. 또한 부분적으로 장애가 발생하더라도 복구하는동안 해당 서비스와 연관이 없는 다른 서비스는 정상 동작합니다.</li>
 </ul>
+<p>각 서비스는 서로 API 를 제공하고 이를 이용해서 서로 호출합니다. 각 서비스는 비동기(async)로 동작하고 메시지 기반으로 통신합니다. 사용자의 모바일 기기에서 REST API 로 서비스를 호출 시 직접 서비스로 가는 것이 아니라 중간에 API 게이트웨이를 거치게 됩니다. 여기서 API 게이트웨이는 부하를 분산시키는 로드 밸런싱, 캐싱, API 미터링, 모니터링 등 다양한 기능을 합니다.<br>출처) <a href="https://futurecreator.github.io/2018/09/14/what-is-microservices-architecture/" target="_blank" rel="noopener">https://futurecreator.github.io/2018/09/14/what-is-microservices-architecture/</a></p>
 </li>
 </ul>
-<p>각 서비스는 서로 API 를 제공하고 이를 이용해서 서로 호출합니다. 각 서비스는 비동기(async)로 동작하고 메시지 기반으로 통신합니다. 사용자의 모바일 기기에서 REST API 로 서비스를 호출 시 직접 서비스로 가는 것이 아니라 중간에 API 게이트웨이를 거치게 됩니다. 여기서 API 게이트웨이는 부하를 분산시키는 로드 밸런싱, 캐싱, API 미터링, 모니터링 등 다양한 기능을 합니다.<br>출처) <a href="https://futurecreator.github.io/2018/09/14/what-is-microservices-architecture/" target="_blank" rel="noopener">https://futurecreator.github.io/2018/09/14/what-is-microservices-architecture/</a></p>
 <ul>
 <li>SOA가 MSA의 상위 개념</li>
 </ul>
