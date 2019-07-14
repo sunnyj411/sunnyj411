@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Thread | 정리방</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Thread wait : wait -&amp;gt; lock 해제 되면 다른 thread 가 wait으로 들어옴 (깨워주면 일어나고 아니면 계속 wait) notify yield : 우선 순위가 높은 스레드에게 실행을 양보하고 Runnable 상태로 감  Critical section 동시에 요청이 들어오는 부분을 처리하기 위해 synchronized 사용 sem">
+  <meta name="description" content="Thread wait : wait -&amp;gt; lock 해제 되면 다른 thread 가 wait으로 들어옴 (깨워주면 일어나고 아니면 계속 wait) notify yield : 우선 순위가 높은 스레드에게 실행을 양보하고 Runnable 상태로 감   Java에서 Thread 생성 방법   Thread 클래스 상속 가장 일반적이고 단순한 방법 Thread클래">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Thread">
 <meta property="og:url" content="http://yoursite.com/2017/10/20/2017-10-20-Thread/index.html">
 <meta property="og:site_name" content="정리방">
-<meta property="og:description" content="Thread wait : wait -&amp;gt; lock 해제 되면 다른 thread 가 wait으로 들어옴 (깨워주면 일어나고 아니면 계속 wait) notify yield : 우선 순위가 높은 스레드에게 실행을 양보하고 Runnable 상태로 감  Critical section 동시에 요청이 들어오는 부분을 처리하기 위해 synchronized 사용 sem">
+<meta property="og:description" content="Thread wait : wait -&amp;gt; lock 해제 되면 다른 thread 가 wait으로 들어옴 (깨워주면 일어나고 아니면 계속 wait) notify yield : 우선 순위가 높은 스레드에게 실행을 양보하고 Runnable 상태로 감   Java에서 Thread 생성 방법   Thread 클래스 상속 가장 일반적이고 단순한 방법 Thread클래">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-26T15:22:36.018Z">
+<meta property="og:updated_time" content="2019-07-14T14:03:13.775Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Thread">
-<meta name="twitter:description" content="Thread wait : wait -&amp;gt; lock 해제 되면 다른 thread 가 wait으로 들어옴 (깨워주면 일어나고 아니면 계속 wait) notify yield : 우선 순위가 높은 스레드에게 실행을 양보하고 Runnable 상태로 감  Critical section 동시에 요청이 들어오는 부분을 처리하기 위해 synchronized 사용 sem">
+<meta name="twitter:description" content="Thread wait : wait -&amp;gt; lock 해제 되면 다른 thread 가 wait으로 들어옴 (깨워주면 일어나고 아니면 계속 wait) notify yield : 우선 순위가 높은 스레드에게 실행을 양보하고 Runnable 상태로 감   Java에서 Thread 생성 방법   Thread 클래스 상속 가장 일반적이고 단순한 방법 Thread클래">
   
     <link rel="alternative" href="/atom.xml" title="정리방" type="application/atom+xml">
   
@@ -157,6 +157,24 @@
 <li>notify</li>
 <li>yield : 우선 순위가 높은 스레드에게 실행을 양보하고 Runnable 상태로 감</li>
 </ul>
+<ul>
+<li>Java에서 Thread 생성 방법</li>
+</ul>
+<ol>
+<li>Thread 클래스 상속<ul>
+<li>가장 일반적이고 단순한 방법</li>
+<li>Thread클래스의 run 메서드만 오버라이드 하여 사용하는 방법</li>
+</ul>
+</li>
+<li>Runnable interface 사용<ul>
+<li>필요에 따라 이미 다른 클래스를 상속을 한 경우, Java에서는 다중 상속을 허용하지 않기 때문에 인터페이스를 이용하여 구현하는 방법</li>
+</ul>
+</li>
+<li>익명클래스<ul>
+<li>이 방법은 쓰레드가 오직 한번만 수행 될때 사용하는 방법입니다.<br>한번 실행된 쓰레드는 재수행이 불가능 합니다.<br>[출처] Java / Thread 생성방법 3가지 , Runnable 인터페이스, Thread 클래스 상속, 익명클래스 사용|작성자 Printf</li>
+</ul>
+</li>
+</ol>
 <h2 id="Critical-section"><a href="#Critical-section" class="headerlink" title="Critical section"></a>Critical section</h2><ul>
 <li>동시에 요청이 들어오는 부분을 처리하기 위해 synchronized 사용</li>
 <li>semapore, primitive 변수 와 string 권하지 않음, 그 이유는 string 은 시간이 지나거나 값이 변경 되면서 주소값이 같아질 수 있기에 그러면 다른 것들 까지 전부 lock이 걸림</li>
@@ -263,11 +281,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/10/31/2017-10-31-Spring security/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/10/31/2017-11-15-Promise/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Spring Security
+          Promise
         
       </div>
     </a>
