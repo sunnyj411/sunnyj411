@@ -130,6 +130,70 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2019-07-18-java" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/18/2019-07-18-java/">java</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/18/2019-07-18-java/" class="archive-article-date">
+  	<time datetime="2019-07-17T15:27:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="GC"><a href="#GC" class="headerlink" title="GC"></a>GC</h2><p>JVM 이 더많은 메모리를 할당해야할때 불필요한 메모리를 회수하거나 재사용하는 불확정적 프로세스,<br>힙메모리를 자동관리하는 방식</p>
+<h2 id="context-switch"><a href="#context-switch" class="headerlink" title="context switch"></a>context switch</h2><p>OS 스케줄러가 현재 실행중인 스레드/태스크를 없애고 대기중인 다른 스레드/태스크로 대체하는 과정</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/18/2019-07-18-java/">GO >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2019-07-15-window.onload, document.ready" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -161,7 +225,7 @@
 <li>window.onload 는 body 내용이 파싱되기 전에 실행이 됨</li>
 </ul>
 <h2 id="body-onload"><a href="#body-onload" class="headerlink" title="body.onload"></a>body.onload</h2><ul>
-<li>body 안의 내용이 파싱되어 표시된 후 실행이 됨</li>
+<li>body 안의 내용(태그들)이 파싱되어 표시된 후 실행이 됨</li>
 <li>문서의 모든 자원이 다운로드되었을때 발생하는 onload</li>
 </ul>
 <p>※ body onload를 사용하면 window.onload 는 실행되지 않음. document는 window의 자식 객체이므로 자식 객체에서만 실행됨 </p>
@@ -446,85 +510,6 @@
 
 
   
-    <article id="post-2019-07-01-RESTful" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/01/2019-07-01-RESTful/">RESTful</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/01/2019-07-01-RESTful/" class="archive-article-date">
-  	<time datetime="2019-07-01T13:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="7-1-RESTful"><a href="#7-1-RESTful" class="headerlink" title="7/1 RESTful"></a>7/1 RESTful</h1><h2 id="REST"><a href="#REST" class="headerlink" title="REST"></a>REST</h2><ul>
-<li>“Representational State Transfer” 의 약자</li>
-<li>자원을 이름으로 구분하여 해당 자원의 상태(정보)를 주고 받는 모든 것을 의미</li>
-</ul>
-<h2 id="RESTful"><a href="#RESTful" class="headerlink" title="RESTful"></a>RESTful</h2><ul>
-<li>URI(Uniform Resource Identifier)를 통해 자원(Resource)을 명시하고, HTTP 메소드를 통해 객체화된 서비스에 접근하는것</li>
-</ul>
-<h2 id="RESTful-API-Application-Programming-Interface"><a href="#RESTful-API-Application-Programming-Interface" class="headerlink" title="RESTful API(Application Programming Interface)"></a>RESTful API(Application Programming Interface)</h2><ul>
-<li>REST 기반으로 서비스 API를 구현한 것</li>
-</ul>
-<h2 id="URI-와-URL"><a href="#URI-와-URL" class="headerlink" title="URI 와 URL"></a>URI 와 URL</h2><ul>
-<li>URL (Uniform Resource Locator) : 정영화 된 리소스 위치 표시 라는 뜻</li>
-<li>URI (Uniform Resource Identifier) : 정형화 된 리소스 식별자 라는 뜻</li>
-<li>예전에는 URL이 가리키는게 자원(파일) 위치 였는데, 예를들어 ‘<a href="http://test.com/folder/sample.txt&#39;" target="_blank" rel="noopener">http://test.com/folder/sample.txt&#39;</a> 처럼 실제 파일의 위치와 파일명을 가리켰는데 요즘에는 ‘<a href="http://test.com/getfile/0&#39;" target="_blank" rel="noopener">http://test.com/getfile/0&#39;</a> 처럼 파일 위치나 파일명을 가리키는 것이 아니라 내부적으로 사용하는 식별자를 쓰는데 이것을 URI라고 한다.</li>
-<li>URI가 URL보다 상위 개념이다</li>
-<li>URI = URL + URN</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/01/2019-07-01-RESTful/">GO >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-2019-07-01-AOP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -583,6 +568,85 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/07/01/2019-07-01-AOP/">GO >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2019-07-01-RESTful" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/01/2019-07-01-RESTful/">RESTful</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/01/2019-07-01-RESTful/" class="archive-article-date">
+  	<time datetime="2019-07-01T13:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="7-1-RESTful"><a href="#7-1-RESTful" class="headerlink" title="7/1 RESTful"></a>7/1 RESTful</h1><h2 id="REST"><a href="#REST" class="headerlink" title="REST"></a>REST</h2><ul>
+<li>“Representational State Transfer” 의 약자</li>
+<li>자원을 이름으로 구분하여 해당 자원의 상태(정보)를 주고 받는 모든 것을 의미</li>
+</ul>
+<h2 id="RESTful"><a href="#RESTful" class="headerlink" title="RESTful"></a>RESTful</h2><ul>
+<li>URI(Uniform Resource Identifier)를 통해 자원(Resource)을 명시하고, HTTP 메소드를 통해 객체화된 서비스에 접근하는것</li>
+</ul>
+<h2 id="RESTful-API-Application-Programming-Interface"><a href="#RESTful-API-Application-Programming-Interface" class="headerlink" title="RESTful API(Application Programming Interface)"></a>RESTful API(Application Programming Interface)</h2><ul>
+<li>REST 기반으로 서비스 API를 구현한 것</li>
+</ul>
+<h2 id="URI-와-URL"><a href="#URI-와-URL" class="headerlink" title="URI 와 URL"></a>URI 와 URL</h2><ul>
+<li>URL (Uniform Resource Locator) : 정영화 된 리소스 위치 표시 라는 뜻</li>
+<li>URI (Uniform Resource Identifier) : 정형화 된 리소스 식별자 라는 뜻</li>
+<li>예전에는 URL이 가리키는게 자원(파일) 위치 였는데, 예를들어 ‘<a href="http://test.com/folder/sample.txt&#39;" target="_blank" rel="noopener">http://test.com/folder/sample.txt&#39;</a> 처럼 실제 파일의 위치와 파일명을 가리켰는데 요즘에는 ‘<a href="http://test.com/getfile/0&#39;" target="_blank" rel="noopener">http://test.com/getfile/0&#39;</a> 처럼 파일 위치나 파일명을 가리키는 것이 아니라 내부적으로 사용하는 식별자를 쓰는데 이것을 URI라고 한다.</li>
+<li>URI가 URL보다 상위 개념이다</li>
+<li>URI = URL + URN</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/01/2019-07-01-RESTful/">GO >></a>
         </p>
       
 
@@ -900,82 +964,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/06/29/2019-06-29-기본 지식 리마인드/">GO >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-2018-09-10-XML과 JSON-post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/10/2018-09-10-XML과 JSON-post/">XML과 JSON</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/10/2018-09-10-XML과 JSON-post/" class="archive-article-date">
-  	<time datetime="2018-09-10T14:52:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h2><ul>
-<li>데이터 전송이 편리하다   MS officen2007에서 word,slide,cell 모두 파일 형식을 xml 기반으로<br>변경(XML 덕분에 다른 형식으로의 변환이 수월하다)   </li>
-<li>장황하고 복잡하다   </li>
-<li>많은 태그들로 응답시간이 늦어짐 -&gt; XML이<br>무거워 웹실행 속도가 느려진다는 인식도 있음   </li>
-<li>보안: XML은 적절하게 파싱(Parsing)을 거쳐도 BL(Billion<br>Laughs) 공격 또는 EE(External Entity) 공격 같은 보안 취약성을 일부 갖고 있다.</li>
-<li>페리는 “XML은 이런 기능을 실수로 활성화하면 시스템이 상당히 위험에 처하게 되지만 JSON은 그렇지 않다. JSON을 이용해 이런 위험에 노출되는 툴을 개발하기는 어렵다. 반면 XML을 사용할 때는 반드시 개발자가 능동적으로 확인하고 피해야 한다”라고 함..</li>
-</ul>
-<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><p>JSON 의 인기 1등공신은 자바스크립트(자바스크립트의 빠른 개발속도에 유연하고 신속한 JSON이 적합함)</p>
-<p>JSON은 데이터 처리 매핑이 더쉽다.<br>실행 중 예상하지 못했던 데이터를 얻게 된다는 (실행중 필요한 데이터 추가가 가능) 단점이지만, XML은 아예 이를 허용하지 않는다.</p>
-<p>JSON은 데이터 교환 형식이고, XML은 더 광범위한 일련의 툴이라고 생각하면 될 것 같다.</p>
-<p>단적인 예가 메타데이터(Metadata)인데 XML은 메타데이터를 지원하고 JSON은 속성에 불과하므로, 메타데이터를 JSON으로 표현해야 하는 문제가 있다.</p>
-<p>또한, JSON에서는 명칭 공간을 지원하지 않고, 그래픽 파일이나 문서 등의 바이너리(Binary) 코딩된 파일은 XML이 더 적합하다</p>
-<p>그리고,</p>
-<p>신규 프로젝트 대부분은 JSON을 이용하는 것이 좋지만 특히 웹 앱의 경우, 기존의 문제없는 XML 을 굳이 JSON으로 바꿀 필요는 없다고 한다.</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/10/2018-09-10-XML과 JSON-post/">GO >></a>
         </p>
       
 

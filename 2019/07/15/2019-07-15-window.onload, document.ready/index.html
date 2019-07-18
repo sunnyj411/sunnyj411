@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="정리방">
 <meta property="og:description" content="document.ready 브라우저가 DOM (document object model) 트리를 생성한 직후 실행 window.load() 보다 더 빠르게 실행됨  window.onload html의 로딩이 끝난 후에 시작 화면에 필요한 모든 요소(css, js, image, iframe etc..)들이 웹 브라우저 메모리에 모두 올려진 다음에 실행됨 전체">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-15T14:02:08.440Z">
+<meta property="og:updated_time" content="2019-07-16T04:47:08.639Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="window.onload, document.ready">
 <meta name="twitter:description" content="document.ready 브라우저가 DOM (document object model) 트리를 생성한 직후 실행 window.load() 보다 더 빠르게 실행됨  window.onload html의 로딩이 끝난 후에 시작 화면에 필요한 모든 요소(css, js, image, iframe etc..)들이 웹 브라우저 메모리에 모두 올려진 다음에 실행됨 전체">
@@ -163,7 +163,7 @@
 <li>window.onload 는 body 내용이 파싱되기 전에 실행이 됨</li>
 </ul>
 <h2 id="body-onload"><a href="#body-onload" class="headerlink" title="body.onload"></a>body.onload</h2><ul>
-<li>body 안의 내용이 파싱되어 표시된 후 실행이 됨</li>
+<li>body 안의 내용(태그들)이 파싱되어 표시된 후 실행이 됨</li>
 <li>문서의 모든 자원이 다운로드되었을때 발생하는 onload</li>
 </ul>
 <p>※ body onload를 사용하면 window.onload 는 실행되지 않음. document는 window의 자식 객체이므로 자식 객체에서만 실행됨 </p>
@@ -245,6 +245,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/07/18/2019-07-18-java/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          java
+        
+      </div>
+    </a>
   
   
     <a href="/2019/07/14/2019-07-14-SOA/" id="article-nav-older" class="article-nav-link-wrap">

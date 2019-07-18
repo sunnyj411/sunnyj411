@@ -130,6 +130,88 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2016-11-06-기록-post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/06/2016-11-06-기록-post/">11/06 기록</a>
+    </h1>
+  
+
+        
+        <a href="/2016/11/06/2016-11-06-기록-post/" class="archive-article-date">
+  	<time datetime="2016-11-06T08:29:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="11-06-기록"><a href="#11-06-기록" class="headerlink" title="11/06 기록"></a>11/06 기록</h1><h2 id="full-GC"><a href="#full-GC" class="headerlink" title="full GC"></a>full GC</h2><ul>
+<li><p>JVM 이 old GC를 처리하면서 전체 Lock이 걸림</p>
+<h2 id="Closable"><a href="#Closable" class="headerlink" title="Closable"></a>Closable</h2><p>Thread Pool 에 있는 task들의 task 실행 순서는 알수 없음</p>
+</li>
+<li><p>Thread Pool 에 runnable, callable을 사용해서 Thread는 매번 생성하지 않고 task가 끝나면 비어진 Thread에 다시 Thread가 수행하도록 하는 Thead pool의 장점이 있음</p>
+</li>
+<li><p>ExecuteService : Thread pool, task 들을 만들고 관리함   </p>
+</li>
+<li><p>singleThreadExecutor : 요청은 여러 개 지만 하나씩 처리 </p>
+</li>
+</ul>
+<h2 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h2><ul>
+<li>Java의 unsigned<ul>
+<li>Java 8에서 Integer, Long 클래스의 메소드로 unsigned type을 지원</li>
+<li>자바의 Primitive Data Type 들 중에는 unsigned 데이터 타입이 존재하지 않음</li>
+<li>byte에서 int(4byte)로 바뀌면서 기존 값이 바뀔 수 있음</li>
+<li>FileReader 는 char형 배열에 저장하고, FileInputStream은 byte 형 배열에 저장 함</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/11/06/2016-11-06-기록-post/">GO >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2016-09-20-기록-post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
