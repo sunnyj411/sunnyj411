@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>java | 정리방</title>
+  <title>OS, GC | 정리방</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="GCJVM 이 더많은 메모리를 할당해야할때 불필요한 메모리를 회수하거나 재사용하는 불확정적 프로세스,힙메모리를 자동관리하는 방식 context switchOS 스케줄러가 현재 실행중인 스레드/태스크를 없애고 대기중인 다른 스레드/태스크로 대체하는 과정">
+  <meta name="description" content="GCJVM 이 더많은 메모리를 할당해야할때 불필요한 메모리를 회수하거나 재사용하는 불확정적 프로세스,힙메모리를 자동관리하는 방식 context switchOS 스케줄러가 현재 실행중인 스레드/태스크를 없애고 대기중인 다른 스레드/태스크로 대체하는 과정 페이지 폴트(Page Fault)페이지 폴트란 프로그램이 자신의 주소 공간(가상메모리공간)에는 존재하지만시">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java">
+<meta property="og:title" content="OS, GC">
 <meta property="og:url" content="http://yoursite.com/2019/07/18/2019-07-18-java/index.html">
 <meta property="og:site_name" content="정리방">
-<meta property="og:description" content="GCJVM 이 더많은 메모리를 할당해야할때 불필요한 메모리를 회수하거나 재사용하는 불확정적 프로세스,힙메모리를 자동관리하는 방식 context switchOS 스케줄러가 현재 실행중인 스레드/태스크를 없애고 대기중인 다른 스레드/태스크로 대체하는 과정">
+<meta property="og:description" content="GCJVM 이 더많은 메모리를 할당해야할때 불필요한 메모리를 회수하거나 재사용하는 불확정적 프로세스,힙메모리를 자동관리하는 방식 context switchOS 스케줄러가 현재 실행중인 스레드/태스크를 없애고 대기중인 다른 스레드/태스크로 대체하는 과정 페이지 폴트(Page Fault)페이지 폴트란 프로그램이 자신의 주소 공간(가상메모리공간)에는 존재하지만시">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-18T14:33:34.614Z">
+<meta property="og:updated_time" content="2019-07-20T16:42:01.650Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java">
-<meta name="twitter:description" content="GCJVM 이 더많은 메모리를 할당해야할때 불필요한 메모리를 회수하거나 재사용하는 불확정적 프로세스,힙메모리를 자동관리하는 방식 context switchOS 스케줄러가 현재 실행중인 스레드/태스크를 없애고 대기중인 다른 스레드/태스크로 대체하는 과정">
+<meta name="twitter:title" content="OS, GC">
+<meta name="twitter:description" content="GCJVM 이 더많은 메모리를 할당해야할때 불필요한 메모리를 회수하거나 재사용하는 불확정적 프로세스,힙메모리를 자동관리하는 방식 context switchOS 스케줄러가 현재 실행중인 스레드/태스크를 없애고 대기중인 다른 스레드/태스크로 대체하는 과정 페이지 폴트(Page Fault)페이지 폴트란 프로그램이 자신의 주소 공간(가상메모리공간)에는 존재하지만시">
   
     <link rel="alternative" href="/atom.xml" title="정리방" type="application/atom+xml">
   
@@ -139,7 +139,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      java
+      OS, GC
     </h1>
   
 
@@ -154,6 +154,9 @@
       
         <h2 id="GC"><a href="#GC" class="headerlink" title="GC"></a>GC</h2><p>JVM 이 더많은 메모리를 할당해야할때 불필요한 메모리를 회수하거나 재사용하는 불확정적 프로세스,<br>힙메모리를 자동관리하는 방식</p>
 <h2 id="context-switch"><a href="#context-switch" class="headerlink" title="context switch"></a>context switch</h2><p>OS 스케줄러가 현재 실행중인 스레드/태스크를 없애고 대기중인 다른 스레드/태스크로 대체하는 과정</p>
+<h2 id="페이지-폴트-Page-Fault"><a href="#페이지-폴트-Page-Fault" class="headerlink" title="페이지 폴트(Page Fault)"></a>페이지 폴트(Page Fault)</h2><p>페이지 폴트란 프로그램이 자신의 주소 공간(가상메모리공간)에는 존재하지만<br>시스템의 RAM에는 현재 없는 데이터나 코드에 접근 시도하였을 경우 발생하는 현상을 말한다.</p>
+<p>페이지 폴트가 발생하면 운영체제는 그 데이터를 메모리로 가져와서 마치 페이지 폴트가 전혀 발생하지 않은 것처럼 프로그램이 계속적으로 동작하게 해준다.</p>
+<p>출처: <a href="https://slenderankle.tistory.com/189" target="_blank" rel="noopener">https://slenderankle.tistory.com/189</a> [SLENDER ANKLES’s 개발블로그]</p>
 
       
 
