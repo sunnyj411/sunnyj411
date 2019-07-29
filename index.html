@@ -426,93 +426,6 @@
 
 
   
-    <article id="post-2019-07-01-AOP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/01/2019-07-01-AOP/">AOP</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/01/2019-07-01-AOP/" class="archive-article-date">
-  	<time datetime="2019-07-01T13:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="7-1-AOP"><a href="#7-1-AOP" class="headerlink" title="7/1 AOP"></a>7/1 AOP</h1><h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2><ul>
-<li>“Aspect-Oriented Programming”의 약자</li>
-<li>기능을 핵심 비지니스 로직과 공통 모듈로 구분하고, 핵심 로직에 영향을 미치지 않고 사이사이에 공통 모듈을 효과적으로 잘 끼워넣도록 하는 개발 방법</li>
-<li>애플리케이션 객체는 원래 해야 할 일인 비즈니스 로직을 수행하는 것 외에는<br>아무것도 하지않음</li>
-<li>로깅이나 트랜잭션 지원과 같은 요소를 만든 후에 코드 밖에서 비즈니스 로직 사이에 필요할 때 삽입하여 코드 밖에서 설정된다는 것이 핵심<ul>
-<li>spring framework aop : 자바의 proxy 클래스를 이용하여 구현되어있음</li>
-<li>proxy 클래스 : invocationHandler와 함께 사용되는 클래스임</li>
-</ul>
-</li>
-</ul>
-<h2 id="Proxy-객체"><a href="#Proxy-객체" class="headerlink" title="Proxy 객체"></a>Proxy 객체</h2><ul>
-<li>실제 개발자가 정의한 클래스를 상속받은 또 다른 클래스에 의해 생성된 객체</li>
-<li>프로그램이 실행되는 시점에 JVM에 의해 클래스를 만든 후 객체를 생성</li>
-<li>프록시 기술을 이용한다면, target 클래스 작성시 특별함 없이 POJO로 작성 (Interface로 정의)</li>
-<li>proxy 생성법 : spring ioc 컨테이너가 제공하는 factorybean방식을 지원하는 proxyfactorybean 이용</li>
-</ul>
-<h2 id="인터페이스를-구현하는-이유"><a href="#인터페이스를-구현하는-이유" class="headerlink" title="인터페이스를 구현하는 이유"></a>인터페이스를 구현하는 이유</h2><ul>
-<li>실제 서비스를 제공해주는 클래스의 추상화 목적</li>
-<li>proxy 기술을 이용할 경우 이 인터페이스가 프록시의 인터페이스로 사용되기 때문</li>
-<li>동적으로 proxy 클래스를 만들어주는 기술을 dynamic proxy라고함</li>
-</ul>
-<h2 id="스프링에서-AOP-구현방식"><a href="#스프링에서-AOP-구현방식" class="headerlink" title="스프링에서 AOP 구현방식"></a>스프링에서 AOP 구현방식</h2><ol>
-<li>XML 스키마 기반의 AOP구현</li>
-<li>@Aspect 어노테이션 기반의 AOP 구현</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/01/2019-07-01-AOP/">GO >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-2019-07-02-DB" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -571,6 +484,93 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/07/01/2019-07-02-DB/">GO >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-2019-07-01-AOP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/01/2019-07-01-AOP/">AOP</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/01/2019-07-01-AOP/" class="archive-article-date">
+  	<time datetime="2019-07-01T13:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="7-1-AOP"><a href="#7-1-AOP" class="headerlink" title="7/1 AOP"></a>7/1 AOP</h1><h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2><ul>
+<li>“Aspect-Oriented Programming”의 약자</li>
+<li>기능을 핵심 비지니스 로직과 공통 모듈로 구분하고, 핵심 로직에 영향을 미치지 않고 사이사이에 공통 모듈을 효과적으로 잘 끼워넣도록 하는 개발 방법</li>
+<li>애플리케이션 객체는 원래 해야 할 일인 비즈니스 로직을 수행하는 것 외에는<br>아무것도 하지않음</li>
+<li>로깅이나 트랜잭션 지원과 같은 요소를 만든 후에 코드 밖에서 비즈니스 로직 사이에 필요할 때 삽입하여 코드 밖에서 설정된다는 것이 핵심<ul>
+<li>spring framework aop : 자바의 proxy 클래스를 이용하여 구현되어있음</li>
+<li>proxy 클래스 : invocationHandler와 함께 사용되는 클래스임</li>
+</ul>
+</li>
+</ul>
+<h2 id="Proxy-객체"><a href="#Proxy-객체" class="headerlink" title="Proxy 객체"></a>Proxy 객체</h2><ul>
+<li>실제 개발자가 정의한 클래스를 상속받은 또 다른 클래스에 의해 생성된 객체</li>
+<li>프로그램이 실행되는 시점에 JVM에 의해 클래스를 만든 후 객체를 생성</li>
+<li>프록시 기술을 이용한다면, target 클래스 작성시 특별함 없이 POJO로 작성 (Interface로 정의)</li>
+<li>proxy 생성법 : spring ioc 컨테이너가 제공하는 factorybean방식을 지원하는 proxyfactorybean 이용</li>
+</ul>
+<h2 id="인터페이스를-구현하는-이유"><a href="#인터페이스를-구현하는-이유" class="headerlink" title="인터페이스를 구현하는 이유"></a>인터페이스를 구현하는 이유</h2><ul>
+<li>실제 서비스를 제공해주는 클래스의 추상화 목적</li>
+<li>proxy 기술을 이용할 경우 이 인터페이스가 프록시의 인터페이스로 사용되기 때문</li>
+<li>동적으로 proxy 클래스를 만들어주는 기술을 dynamic proxy라고함</li>
+</ul>
+<h2 id="스프링에서-AOP-구현방식"><a href="#스프링에서-AOP-구현방식" class="headerlink" title="스프링에서 AOP 구현방식"></a>스프링에서 AOP 구현방식</h2><ol>
+<li>XML 스키마 기반의 AOP구현</li>
+<li>@Aspect 어노테이션 기반의 AOP 구현</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/01/2019-07-01-AOP/">GO >></a>
         </p>
       
 
@@ -741,6 +741,11 @@
 <li>@Resource: 이름(id)을 우선으로 bean 객체를 검색, 못 찾으면 타입(class) 검색, Java의 표준 어노테이션</li>
 </ul>
 </li>
+</ul>
+<h2 id="filter와-interceptor-의-차이"><a href="#filter와-interceptor-의-차이" class="headerlink" title="filter와 interceptor 의 차이"></a>filter와 interceptor 의 차이</h2><ul>
+<li>필터(Filter)는 dispatcherServlet으로 요청이 가기전에 실행된다</li>
+<li>인터셉터(Interceptor)는 Controller로 요청이 가기전에 실행된다</li>
+<li>공통점은 둘다 컨트롤러 전후 처리하는 용도로 사용된다</li>
 </ul>
 
       

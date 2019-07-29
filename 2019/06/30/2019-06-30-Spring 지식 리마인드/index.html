@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="정리방">
 <meta property="og:description" content="6/30 Spring 지식 리마인드Spring Framework 스프링은 POJO(Plain Old Java Object) 방식의 프레임워크이다.  POJO : 순수 java object성 bean. 상속이나 어노테이션을 필요로 하지않는 객체. 순수하게 setter, getter 메소드로 이루어진 Value Object성의 Bean.   스프링은 제어 반전">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-14T13:55:17.885Z">
+<meta property="og:updated_time" content="2019-07-29T12:39:46.764Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring 지식 리마인드">
 <meta name="twitter:description" content="6/30 Spring 지식 리마인드Spring Framework 스프링은 POJO(Plain Old Java Object) 방식의 프레임워크이다.  POJO : 순수 java object성 bean. 상속이나 어노테이션을 필요로 하지않는 객체. 순수하게 setter, getter 메소드로 이루어진 Value Object성의 Bean.   스프링은 제어 반전">
@@ -194,6 +194,11 @@
 <li>@Resource: 이름(id)을 우선으로 bean 객체를 검색, 못 찾으면 타입(class) 검색, Java의 표준 어노테이션</li>
 </ul>
 </li>
+</ul>
+<h2 id="filter와-interceptor-의-차이"><a href="#filter와-interceptor-의-차이" class="headerlink" title="filter와 interceptor 의 차이"></a>filter와 interceptor 의 차이</h2><ul>
+<li>필터(Filter)는 dispatcherServlet으로 요청이 가기전에 실행된다</li>
+<li>인터셉터(Interceptor)는 Controller로 요청이 가기전에 실행된다</li>
+<li>공통점은 둘다 컨트롤러 전후 처리하는 용도로 사용된다</li>
 </ul>
 
       
